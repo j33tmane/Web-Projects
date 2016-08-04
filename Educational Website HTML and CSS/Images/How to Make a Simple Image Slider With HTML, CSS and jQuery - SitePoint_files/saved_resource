@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+  <head>
+    <link href="//dab1nmslvvntp.cloudfront.net" ref="dns-prefetch">
+    <link href="//d2sis3lil8ndrq.cloudfront.net" ref="dns-prefetch">
+    <link href="//sitepoint.com" ref="dns-prefetch">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" content="http://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.web-foundations.png">
+        
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="apple-touch-icon-precomposed" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for SitePoint.com" href="http://www.sitepoint.com/feed/" />
+
+        <link href="https://plus.google.com/+sitepoint" rel="publisher" />
+        <meta property="twitter:account_id" content="15743570" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <script type="text/javascript">
+    function r(f){/in/.test(document.readyState)?setTimeout(r,9,f):f()}
+    </script>
+    <script data-kz-key="b421ba44cb0c0e6e" data-kz-namespace="kzs" src="//cdn.kaizenplatform.net/s/b4/21ba44cb0c0e6e.js"></script>
+    
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30131-1', '.sitepoint.com');
+
+  ga('set', 'dimension1', 'sp_web_foundation');
+ga('set', 'dimension2', '');
+ga('set', 'dimension3', '');
+ga('set', 'dimension4', '2014-09-15');
+ga('set', 'dimension5', 'Tim Evko');
+
+  ga('set', 'contentGroup5', '');  //Integration with Kaizen
+  try { kzs("activateUniversalAnalytics"); } catch(e) {}
+  ga('send', 'pageview');
+
+  // Cross Domain Tracking to Learnable
+  ga('require', 'linker');
+  // command, domains, useAnchor, enableForms
+  ga('linker:autoLink', ['learnable.com'], false, true);
+</script>
+    <script type="text/javascript">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+      var gads = document.createElement('script');
+      gads.async = true;
+      gads.type = 'text/javascript';
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+    <script type="text/javascript">
+  var AdBridg = AdBridg || {};
+  AdBridg.cmd = AdBridg.cmd || [];
+  (function() {
+      var adb = document.createElement("script");
+      adb.async = true;
+      adb.type = "text/javascript";
+      adb.src = 'http://prod.adspsp.com/adb.1339625.1.min.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(adb, node);
+  })();
+</script>
+    <!-- RocketFuel Code for SitePoint -->
+    <script src="http://ads.yahoo.com/pixel?id=2557776&t=1" type="text/javascript"></script>
+    <!-- End of RocketFuel Code -->
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v2.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>How to Make a Simple Image Slider With HTML, CSS and jQuery - SitePoint</title>
+<meta name="description" content="If you’re a web developer, the time will come when you may have to build a slideshow. Tim Evko explains how to build one using HTML, CSS, and jQuery."/>
+<link rel="canonical" href="http://www.sitepoint.com/web-foundations/making-simple-image-slider-html-css-jquery/" />
+<link rel="publisher" href="https://plus.google.com/+sitepoint/"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Make a Simple Image Slider With HTML, CSS and jQuery - SitePoint" />
+<meta property="og:description" content="If you’re a web developer, the time will come when you may have to build a slideshow. Tim Evko explains how to build one using HTML, CSS, and jQuery." />
+<meta property="og:url" content="http://www.sitepoint.com/web-foundations/making-simple-image-slider-html-css-jquery/" />
+<meta property="og:site_name" content="SitePoint" />
+<meta property="article:publisher" content="https://www.facebook.com/sitepoint" />
+<meta property="article:section" content="HTML" />
+<meta property="fb:admins" content="121300382" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="If you’re a web developer, the time will come when you may have to build a slideshow. Tim Evko explains how to build one using HTML, CSS, and jQuery."/>
+<meta name="twitter:title" content="How to Make a Simple Image Slider With HTML, CSS and jQuery - SitePoint"/>
+<meta name="twitter:site" content="@sitepointdotcom"/>
+<meta name="twitter:domain" content="SitePoint"/>
+<meta name="twitter:creator" content="@tevko"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="SitePoint &raquo; How to Make a Simple Image Slider With HTML, CSS and jQuery Comments Feed" href="http://www.sitepoint.com/web-foundations/making-simple-image-slider-html-css-jquery/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.sitepoint.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-postratings-css'  href='http://www.sitepoint.com/wp-content/plugins/wp-postratings/postratings-css.css?ver=1.82' type='text/css' media='all' />
+<link rel='stylesheet' id='sitepoint-styles-css'  href='//www.sitepoint.com/wp-content/themes/sitepoint/assets/stylesheets/styles-62bb685ee8203c5ec3aca20ebd1315e7.css?ver=4.2.2' type='text/css' media='all' />
+<script type='text/javascript' src='//www.sitepoint.com/wp-content/themes/sitepoint/assets/javascripts/scripts-head-e4a2be27db699092d2993e42901cedf6.js?ver=4.2.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sitepoint.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sitepoint.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.2" />
+<link rel='shortlink' href='http://www.sitepoint.com/?p=90394' />
+<!-- BEGIN wp-parsely Plugin Version 1.7 -->
+<meta name='wp-parsely_version' id='wp-parsely_version' content='1.7' />
+   <script type="application/ld+json">
+   {"@context":"http:\/\/schema.org","@type":"NewsArticle","headline":"How to Make a Simple Image Slider With HTML, CSS and jQuery","url":"http:\/\/www.sitepoint.com\/web-foundations\/making-simple-image-slider-html-css-jquery\/","thumbnailUrl":"","articleId":"90394","dateCreated":"2014-09-16T06:44:08Z","articleSection":"Uncategorized","creator":["Tim Evko"],"keywords":[]}   </script>
+<!-- END wp-parsely Plugin Version 1.7 -->
+    <script type="text/javascript">
+      var SP_Adbridg_First_Slot_Rendered = false;
+      AdBridg.cmd.push(function() {
+        		googletag.pubads().setTargeting("channel", "webfoundations");
+		googletag.pubads().setTargeting("post_id", "90394");
+		googletag.pubads().setTargeting("AOL",["true", "false"]);
+		googletag.pubads().setTargeting("OpenX",["true", "false"]);
+		googletag.pubads().setTargeting("Tribal",["true", "false"]);
+		googletag.pubads().enableSingleRequest();
+                googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().addEventListener('slotRenderEnded', function(e) {
+          if (SP_Adbridg_First_Slot_Rendered) return;
+          SP_Adbridg_First_Slot_Rendered = true;
+          gaEventQueue && gaEventQueue.track('CanSeeAds', 'dfpFirstRendered', {'nonInteraction': true});
+        });
+        AdBridg.serve();
+      });
+    </script>
+    <!--[if lt IE 9]>
+      <script src="/wp-content/themes/sitepoint/assets/javascripts/vendor/respond.custom.min.js"></script>
+    <![endif]-->
+    <style>
+  .t-p-teal-color { color: #1a9b9e }
+  a.t-p-teal-color:hover,
+  button.t-p-teal-color:hover { color: #018285 }
+
+  .t-p-teal-bg { background-color: #1a9b9e }
+  a.t-p-teal-bg:hover,
+  button.t-p-teal-bg:hover { background-color: #018285}
+
+  .t-p-teal-border { border-color: #1a9b9e }
+  a.t-p-teal-border:hover,
+  button.t-p-teal-border:hover { border-color: #018285 }
+
+  .t-p-teal-bg-tint { background-color: #5EB9BB }
+  .t-p-teal-bg-dark { background-color: #018285 }
+  .t-p-teal-border-tint { border-color: #5EB9BB }
+
+  .t-p-teal-fill path, .t-p-teal-fill ellipse, .t-p-teal-fill rect { fill: #1a9b9e; }
+
+  .t-p-teal-list li:before { background-color: #1a9b9e; }
+
+  .t-p-watermelon-color { color: #FF8480 }
+  a.t-p-watermelon-color:hover,
+  button.t-p-watermelon-color:hover { color: #E66B67 }
+
+  .t-p-watermelon-bg { background-color: #FF8480 }
+  a.t-p-watermelon-bg:hover,
+  button.t-p-watermelon-bg:hover { background-color: #E66B67}
+
+  .t-p-watermelon-border { border-color: #FF8480 }
+  a.t-p-watermelon-border:hover,
+  button.t-p-watermelon-border:hover { border-color: #E66B67 }
+
+  .t-p-watermelon-bg-tint { background-color: #FFA9A6 }
+  .t-p-watermelon-bg-dark { background-color: #E66B67 }
+  .t-p-watermelon-border-tint { border-color: #FFA9A6 }
+
+  .t-p-watermelon-fill path, .t-p-watermelon-fill ellipse, .t-p-watermelon-fill rect { fill: #FF8480; }
+
+  .t-p-watermelon-list li:before { background-color: #FF8480; }
+
+  .t-p-pop-bg { background-color: #FF8480 }
+  a.t-p-pop-bg:hover,
+  button.t-p-pop-bg:hover { background-color: #E66B67}
+</style>
+        <!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"3/2Rk1ao6C526C", domain:"sitepoint.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=3/2Rk1ao6C526C" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+  </head>
+
+  <body>
+
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PFTWN4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PFTWN4');</script>
+    <!-- End Google Tag Manager -->
+
+    <header class="main-header" role="banner">
+      <nav uni-nav="small">
+        <section uni-nav-section="left">
+          <a uni-nav-item="logo" href="/">
+            <svg class="sp-logo" viewBox="0 0 123 27">
+  <g fill-rule="evenodd">
+    <path d="M31.36,16.75 C31.56,17.07 31.82,17.31 32.14,17.50 C32.46,17.68 32.82,17.82 33.23,17.89 C33.63,17.97 34.05,18.01 34.48,18.01 C34.81,18.01 35.16,17.99 35.52,17.94 C35.89,17.89 36.22,17.81 36.53,17.68 C36.83,17.55 37.08,17.36 37.28,17.11 C37.48,16.87 37.58,16.55 37.58,16.17 C37.58,15.64 37.37,15.24 36.96,14.97 C36.55,14.69 36.03,14.47 35.41,14.31 C34.79,14.14 34.12,13.99 33.39,13.85 C32.66,13.71 31.99,13.52 31.37,13.27 C30.75,13.03 30.23,12.68 29.82,12.23 C29.41,11.78 29.20,11.16 29.20,10.36 C29.20,9.73 29.34,9.20 29.63,8.75 C29.92,8.30 30.30,7.94 30.75,7.66 C31.20,7.38 31.72,7.17 32.29,7.03 C32.86,6.90 33.42,6.83 33.99,6.83 C34.71,6.83 35.38,6.89 35.99,7.01 C36.61,7.13 37.15,7.34 37.62,7.63 C38.09,7.93 38.46,8.33 38.75,8.83 C39.03,9.34 39.19,9.96 39.24,10.72 L37.13,10.72 C37.10,10.32 36.99,9.98 36.81,9.72 C36.63,9.46 36.40,9.25 36.12,9.08 C35.84,8.92 35.53,8.81 35.19,8.74 C34.85,8.66 34.51,8.63 34.16,8.63 C33.84,8.63 33.53,8.65 33.20,8.70 C32.88,8.75 32.59,8.83 32.32,8.95 C32.06,9.07 31.84,9.23 31.68,9.43 C31.51,9.63 31.43,9.89 31.43,10.21 C31.43,10.56 31.56,10.86 31.82,11.09 C32.07,11.32 32.40,11.51 32.80,11.66 C33.19,11.82 33.64,11.95 34.13,12.05 C34.63,12.15 35.13,12.26 35.62,12.37 C36.15,12.49 36.67,12.62 37.17,12.78 C37.67,12.94 38.12,13.15 38.51,13.42 C38.90,13.68 39.21,14.01 39.45,14.41 C39.69,14.81 39.81,15.31 39.81,15.90 C39.81,16.66 39.65,17.28 39.33,17.77 C39.01,18.27 38.58,18.67 38.06,18.98 C37.54,19.28 36.96,19.49 36.30,19.61 C35.65,19.73 35.00,19.79 34.36,19.79 C33.65,19.79 32.97,19.72 32.32,19.58 C31.68,19.43 31.11,19.20 30.61,18.87 C30.12,18.54 29.72,18.11 29.42,17.57 C29.13,17.03 28.96,16.38 28.93,15.61 L31.03,15.61 C31.05,16.06 31.16,16.44 31.36,16.75" id="Fill-1"></path>
+    <path d="M42.27,7.12 L44.37,7.12 L44.37,19.53 L42.27,19.53 L42.27,7.12 Z" id="Fill-2"></path>
+    <path d="M53.13,7.12 L53.13,8.92 L50.57,8.92 L50.57,16.62 C50.57,16.86 50.59,17.05 50.63,17.20 C50.67,17.34 50.75,17.46 50.87,17.54 C50.99,17.62 51.15,17.67 51.35,17.69 C51.56,17.71 51.83,17.73 52.16,17.73 L53.13,17.73 L53.13,19.53 L51.51,19.53 C50.97,19.53 50.50,19.49 50.11,19.42 C49.72,19.35 49.41,19.22 49.17,19.02 C48.93,18.83 48.75,18.56 48.64,18.21 C48.52,17.86 48.46,17.39 48.46,16.81 L48.46,8.92 L46.28,8.92 L46.28,7.12 L48.46,7.12 L48.46,3.39 L50.57,3.39 L50.57,7.12 L53.13,7.12" id="Fill-3"></path>
+    <path d="M64.53,18.73 C63.57,19.44 62.36,19.79 60.91,19.79 C59.89,19.79 59.00,19.63 58.25,19.31 C57.49,18.99 56.86,18.54 56.35,17.97 C55.84,17.39 55.45,16.70 55.20,15.90 C54.94,15.10 54.80,14.23 54.76,13.29 C54.76,12.34 54.91,11.48 55.21,10.69 C55.51,9.91 55.92,9.23 56.46,8.65 C57.00,8.08 57.63,7.63 58.37,7.31 C59.11,6.99 59.91,6.83 60.79,6.83 C61.93,6.83 62.87,7.05 63.63,7.51 C64.38,7.97 64.98,8.55 65.44,9.25 C65.89,9.96 66.20,10.73 66.38,11.56 C66.55,12.39 66.62,13.18 66.59,13.93 L56.99,13.93 C56.98,14.48 57.04,14.99 57.19,15.48 C57.34,15.97 57.58,16.40 57.91,16.78 C58.24,17.16 58.66,17.46 59.18,17.68 C59.69,17.90 60.29,18.01 60.98,18.01 C61.88,18.01 62.61,17.82 63.18,17.41 C63.75,17.02 64.13,16.41 64.31,15.59 L66.39,15.59 C66.11,16.98 65.49,18.03 64.53,18.73 L64.53,18.73 Z M64.02,10.76 C63.83,10.33 63.58,9.96 63.25,9.65 C62.93,9.34 62.55,9.09 62.11,8.90 C61.68,8.72 61.19,8.63 60.66,8.63 C60.12,8.63 59.62,8.72 59.19,8.90 C58.75,9.09 58.37,9.34 58.06,9.66 C57.75,9.98 57.50,10.35 57.32,10.78 C57.13,11.20 57.03,11.65 56.99,12.13 L64.36,12.13 C64.32,11.65 64.21,11.20 64.02,10.76 L64.02,10.76 Z" id="Fill-4"></path>
+    <path d="M70.95,7.12 L70.95,8.80 L71.00,8.80 C71.35,8.11 71.89,7.61 72.64,7.30 C73.38,6.98 74.20,6.83 75.09,6.83 C76.09,6.83 76.95,7.00 77.68,7.36 C78.42,7.71 79.03,8.18 79.52,8.78 C80.01,9.38 80.37,10.08 80.62,10.86 C80.87,11.65 80.99,12.48 80.99,13.36 C80.99,14.24 80.87,15.07 80.63,15.85 C80.39,16.64 80.03,17.32 79.54,17.91 C79.06,18.49 78.44,18.95 77.71,19.29 C76.97,19.62 76.12,19.79 75.14,19.79 C74.83,19.79 74.48,19.76 74.09,19.70 C73.70,19.63 73.32,19.53 72.94,19.38 C72.56,19.24 72.20,19.04 71.86,18.79 C71.52,18.55 71.23,18.24 71.00,17.87 L70.95,17.87 L70.95,24.26 L68.84,24.26 L68.84,7.12 L70.95,7.12 L70.95,7.12 Z M78.53,11.52 C78.37,10.97 78.13,10.48 77.81,10.04 C77.49,9.61 77.07,9.27 76.57,9.01 C76.06,8.76 75.47,8.63 74.79,8.63 C74.08,8.63 73.48,8.76 72.98,9.04 C72.49,9.31 72.08,9.67 71.77,10.10 C71.46,10.55 71.23,11.05 71.09,11.60 C70.95,12.17 70.88,12.73 70.88,13.31 C70.88,13.92 70.95,14.51 71.10,15.07 C71.25,15.64 71.48,16.14 71.81,16.57 C72.13,17.01 72.55,17.35 73.06,17.62 C73.57,17.88 74.19,18.01 74.92,18.01 C75.65,18.01 76.25,17.88 76.74,17.61 C77.23,17.34 77.62,16.98 77.92,16.53 C78.22,16.08 78.43,15.57 78.56,14.99 C78.70,14.41 78.76,13.82 78.76,13.21 C78.76,12.64 78.68,12.07 78.53,11.52 L78.53,11.52 Z" id="Fill-5"></path>
+    <path d="M83.17,10.78 C83.44,9.98 83.84,9.30 84.36,8.71 C84.89,8.13 85.55,7.67 86.33,7.33 C87.10,7.00 87.99,6.83 89.00,6.83 C90.03,6.83 90.92,7.00 91.69,7.33 C92.46,7.67 93.11,8.13 93.64,8.71 C94.17,9.30 94.56,9.98 94.83,10.78 C95.09,11.57 95.23,12.42 95.23,13.33 C95.23,14.25 95.09,15.09 94.83,15.88 C94.56,16.66 94.17,17.35 93.64,17.93 C93.11,18.52 92.46,18.97 91.69,19.30 C90.92,19.63 90.03,19.79 89.00,19.79 C87.99,19.79 87.10,19.63 86.33,19.30 C85.55,18.97 84.89,18.52 84.36,17.93 C83.84,17.35 83.44,16.66 83.17,15.88 C82.91,15.09 82.78,14.25 82.78,13.33 C82.78,12.42 82.91,11.57 83.17,10.78 L83.17,10.78 Z M85.32,15.34 C85.53,15.92 85.81,16.41 86.18,16.80 C86.54,17.19 86.96,17.49 87.45,17.70 C87.94,17.91 88.46,18.01 89.00,18.01 C89.55,18.01 90.06,17.91 90.55,17.70 C91.04,17.49 91.46,17.19 91.83,16.80 C92.19,16.41 92.48,15.92 92.68,15.34 C92.89,14.75 92.99,14.09 92.99,13.33 C92.99,12.58 92.89,11.91 92.68,11.33 C92.48,10.75 92.19,10.25 91.83,9.85 C91.46,9.45 91.04,9.15 90.55,8.94 C90.06,8.73 89.55,8.63 89.00,8.63 C88.46,8.63 87.94,8.73 87.45,8.94 C86.96,9.15 86.54,9.45 86.18,9.85 C85.81,10.25 85.53,10.75 85.32,11.33 C85.11,11.91 85.01,12.58 85.01,13.33 C85.01,14.09 85.11,14.75 85.32,15.34 L85.32,15.34 Z" id="Fill-6"></path>
+    <path d="M97.83,7.12 L99.94,7.12 L99.94,19.53 L97.83,19.53 L97.83,7.12 Z" id="Fill-7"></path>
+    <path d="M105.19,7.12 L105.19,9.08 L105.24,9.08 C106.12,7.58 107.51,6.83 109.41,6.83 C110.25,6.83 110.95,6.94 111.51,7.16 C112.08,7.39 112.53,7.70 112.88,8.10 C113.23,8.50 113.47,8.98 113.61,9.53 C113.75,10.08 113.82,10.69 113.82,11.36 L113.82,19.53 L111.71,19.53 L111.71,11.12 C111.71,10.36 111.48,9.75 111.02,9.30 C110.56,8.85 109.92,8.63 109.11,8.63 C108.46,8.63 107.91,8.72 107.43,8.92 C106.96,9.11 106.57,9.38 106.26,9.73 C105.94,10.08 105.71,10.50 105.55,10.97 C105.39,11.44 105.32,11.96 105.32,12.52 L105.32,19.53 L103.21,19.53 L103.21,7.12 L105.19,7.12" id="Fill-8"></path>
+    <path d="M122.47,7.12 L122.47,8.92 L119.92,8.92 L119.92,16.62 C119.92,16.86 119.94,17.05 119.98,17.20 C120.02,17.34 120.10,17.46 120.22,17.54 C120.33,17.62 120.49,17.67 120.70,17.69 C120.91,17.71 121.18,17.73 121.50,17.73 L122.47,17.73 L122.47,19.53 L120.86,19.53 C120.32,19.53 119.85,19.49 119.46,19.42 C119.07,19.35 118.76,19.22 118.52,19.02 C118.28,18.83 118.10,18.56 117.99,18.21 C117.87,17.86 117.81,17.39 117.81,16.81 L117.81,8.92 L115.63,8.92 L115.63,7.12 L117.81,7.12 L117.81,3.39 L119.92,3.39 L119.92,7.12 L122.47,7.12" id="Fill-9"></path>
+    <path d="M0.67,11.87 L2.62,13.76 L8.76,19.50 L11.41,16.94 C11.65,16.61 11.64,16.16 11.36,15.84 L8.94,13.72 L8.95,13.72 L6.34,11.19 C6.04,10.84 6.04,10.32 6.37,9.99 L13.38,3.21 L10.20,0.12 L0.68,9.31 C-0.05,10.02 -0.05,11.17 0.67,11.87" id="Fill-10"></path>
+    <path d="M21.60,15.15 L19.66,13.27 L13.51,7.53 L10.86,10.08 C10.62,10.42 10.64,10.87 10.91,11.19 L13.33,13.31 L13.33,13.31 L15.93,15.84 C16.24,16.19 16.23,16.70 15.91,17.04 L8.89,23.82 L12.08,26.91 L19.65,19.60 L21.60,17.71 C22.33,17.01 22.33,15.86 21.60,15.15" id="Fill-11"></path>
+    <path d="M44.55,4.58 C44.55,5.24 44.00,5.77 43.32,5.77 C42.64,5.77 42.09,5.24 42.09,4.58 C42.09,3.93 42.64,3.39 43.32,3.39 C44.00,3.39 44.55,3.93 44.55,4.58" id="Fill-12"></path>
+    <path d="M100.11,4.58 C100.11,5.24 99.56,5.77 98.88,5.77 C98.20,5.77 97.65,5.24 97.65,4.58 C97.65,3.93 98.20,3.39 98.88,3.39 C99.56,3.39 100.11,3.93 100.11,4.58" id="Fill-13"></path>
+  </g>
+</svg>
+          </a>
+        </section>
+        <section uni-nav-section="right">
+          <a uni-nav-item="button" href="/premium/">Premium</a>
+          <div uni-nav-dropdown>
+            <a uni-nav-item>
+              <i class="fa fa-navicon"></i>
+            </a>
+            <div uni-nav-dropdown-inner="medium">
+              <a uni-nav-item href="https://shop.sitepoint.com">Shop</a>
+              <a uni-nav-item href="https://www.sitepoint.com/community/">Forums</a>
+              <a uni-nav-item href="https://www.sitepoint.com/versioning/">Versioning</a>
+              <a uni-nav-item href="/reference/">Reference</a>
+              <div uni-nav-item="dropdown-search">
+                <form method="get" action="http://www.sitepoint.com/">
+                  <input autocomplete="off" class="small" name="s" placeholder="Search SitePoint" type="text">
+                  <button><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </nav>
+
+      <nav uni-nav="medium">
+        <section uni-nav-section="left">
+          <a uni-nav-item="logo" href="/">
+            <svg class="sp-logo" viewBox="0 0 123 27">
+  <g fill-rule="evenodd">
+    <path d="M31.36,16.75 C31.56,17.07 31.82,17.31 32.14,17.50 C32.46,17.68 32.82,17.82 33.23,17.89 C33.63,17.97 34.05,18.01 34.48,18.01 C34.81,18.01 35.16,17.99 35.52,17.94 C35.89,17.89 36.22,17.81 36.53,17.68 C36.83,17.55 37.08,17.36 37.28,17.11 C37.48,16.87 37.58,16.55 37.58,16.17 C37.58,15.64 37.37,15.24 36.96,14.97 C36.55,14.69 36.03,14.47 35.41,14.31 C34.79,14.14 34.12,13.99 33.39,13.85 C32.66,13.71 31.99,13.52 31.37,13.27 C30.75,13.03 30.23,12.68 29.82,12.23 C29.41,11.78 29.20,11.16 29.20,10.36 C29.20,9.73 29.34,9.20 29.63,8.75 C29.92,8.30 30.30,7.94 30.75,7.66 C31.20,7.38 31.72,7.17 32.29,7.03 C32.86,6.90 33.42,6.83 33.99,6.83 C34.71,6.83 35.38,6.89 35.99,7.01 C36.61,7.13 37.15,7.34 37.62,7.63 C38.09,7.93 38.46,8.33 38.75,8.83 C39.03,9.34 39.19,9.96 39.24,10.72 L37.13,10.72 C37.10,10.32 36.99,9.98 36.81,9.72 C36.63,9.46 36.40,9.25 36.12,9.08 C35.84,8.92 35.53,8.81 35.19,8.74 C34.85,8.66 34.51,8.63 34.16,8.63 C33.84,8.63 33.53,8.65 33.20,8.70 C32.88,8.75 32.59,8.83 32.32,8.95 C32.06,9.07 31.84,9.23 31.68,9.43 C31.51,9.63 31.43,9.89 31.43,10.21 C31.43,10.56 31.56,10.86 31.82,11.09 C32.07,11.32 32.40,11.51 32.80,11.66 C33.19,11.82 33.64,11.95 34.13,12.05 C34.63,12.15 35.13,12.26 35.62,12.37 C36.15,12.49 36.67,12.62 37.17,12.78 C37.67,12.94 38.12,13.15 38.51,13.42 C38.90,13.68 39.21,14.01 39.45,14.41 C39.69,14.81 39.81,15.31 39.81,15.90 C39.81,16.66 39.65,17.28 39.33,17.77 C39.01,18.27 38.58,18.67 38.06,18.98 C37.54,19.28 36.96,19.49 36.30,19.61 C35.65,19.73 35.00,19.79 34.36,19.79 C33.65,19.79 32.97,19.72 32.32,19.58 C31.68,19.43 31.11,19.20 30.61,18.87 C30.12,18.54 29.72,18.11 29.42,17.57 C29.13,17.03 28.96,16.38 28.93,15.61 L31.03,15.61 C31.05,16.06 31.16,16.44 31.36,16.75" id="Fill-1"></path>
+    <path d="M42.27,7.12 L44.37,7.12 L44.37,19.53 L42.27,19.53 L42.27,7.12 Z" id="Fill-2"></path>
+    <path d="M53.13,7.12 L53.13,8.92 L50.57,8.92 L50.57,16.62 C50.57,16.86 50.59,17.05 50.63,17.20 C50.67,17.34 50.75,17.46 50.87,17.54 C50.99,17.62 51.15,17.67 51.35,17.69 C51.56,17.71 51.83,17.73 52.16,17.73 L53.13,17.73 L53.13,19.53 L51.51,19.53 C50.97,19.53 50.50,19.49 50.11,19.42 C49.72,19.35 49.41,19.22 49.17,19.02 C48.93,18.83 48.75,18.56 48.64,18.21 C48.52,17.86 48.46,17.39 48.46,16.81 L48.46,8.92 L46.28,8.92 L46.28,7.12 L48.46,7.12 L48.46,3.39 L50.57,3.39 L50.57,7.12 L53.13,7.12" id="Fill-3"></path>
+    <path d="M64.53,18.73 C63.57,19.44 62.36,19.79 60.91,19.79 C59.89,19.79 59.00,19.63 58.25,19.31 C57.49,18.99 56.86,18.54 56.35,17.97 C55.84,17.39 55.45,16.70 55.20,15.90 C54.94,15.10 54.80,14.23 54.76,13.29 C54.76,12.34 54.91,11.48 55.21,10.69 C55.51,9.91 55.92,9.23 56.46,8.65 C57.00,8.08 57.63,7.63 58.37,7.31 C59.11,6.99 59.91,6.83 60.79,6.83 C61.93,6.83 62.87,7.05 63.63,7.51 C64.38,7.97 64.98,8.55 65.44,9.25 C65.89,9.96 66.20,10.73 66.38,11.56 C66.55,12.39 66.62,13.18 66.59,13.93 L56.99,13.93 C56.98,14.48 57.04,14.99 57.19,15.48 C57.34,15.97 57.58,16.40 57.91,16.78 C58.24,17.16 58.66,17.46 59.18,17.68 C59.69,17.90 60.29,18.01 60.98,18.01 C61.88,18.01 62.61,17.82 63.18,17.41 C63.75,17.02 64.13,16.41 64.31,15.59 L66.39,15.59 C66.11,16.98 65.49,18.03 64.53,18.73 L64.53,18.73 Z M64.02,10.76 C63.83,10.33 63.58,9.96 63.25,9.65 C62.93,9.34 62.55,9.09 62.11,8.90 C61.68,8.72 61.19,8.63 60.66,8.63 C60.12,8.63 59.62,8.72 59.19,8.90 C58.75,9.09 58.37,9.34 58.06,9.66 C57.75,9.98 57.50,10.35 57.32,10.78 C57.13,11.20 57.03,11.65 56.99,12.13 L64.36,12.13 C64.32,11.65 64.21,11.20 64.02,10.76 L64.02,10.76 Z" id="Fill-4"></path>
+    <path d="M70.95,7.12 L70.95,8.80 L71.00,8.80 C71.35,8.11 71.89,7.61 72.64,7.30 C73.38,6.98 74.20,6.83 75.09,6.83 C76.09,6.83 76.95,7.00 77.68,7.36 C78.42,7.71 79.03,8.18 79.52,8.78 C80.01,9.38 80.37,10.08 80.62,10.86 C80.87,11.65 80.99,12.48 80.99,13.36 C80.99,14.24 80.87,15.07 80.63,15.85 C80.39,16.64 80.03,17.32 79.54,17.91 C79.06,18.49 78.44,18.95 77.71,19.29 C76.97,19.62 76.12,19.79 75.14,19.79 C74.83,19.79 74.48,19.76 74.09,19.70 C73.70,19.63 73.32,19.53 72.94,19.38 C72.56,19.24 72.20,19.04 71.86,18.79 C71.52,18.55 71.23,18.24 71.00,17.87 L70.95,17.87 L70.95,24.26 L68.84,24.26 L68.84,7.12 L70.95,7.12 L70.95,7.12 Z M78.53,11.52 C78.37,10.97 78.13,10.48 77.81,10.04 C77.49,9.61 77.07,9.27 76.57,9.01 C76.06,8.76 75.47,8.63 74.79,8.63 C74.08,8.63 73.48,8.76 72.98,9.04 C72.49,9.31 72.08,9.67 71.77,10.10 C71.46,10.55 71.23,11.05 71.09,11.60 C70.95,12.17 70.88,12.73 70.88,13.31 C70.88,13.92 70.95,14.51 71.10,15.07 C71.25,15.64 71.48,16.14 71.81,16.57 C72.13,17.01 72.55,17.35 73.06,17.62 C73.57,17.88 74.19,18.01 74.92,18.01 C75.65,18.01 76.25,17.88 76.74,17.61 C77.23,17.34 77.62,16.98 77.92,16.53 C78.22,16.08 78.43,15.57 78.56,14.99 C78.70,14.41 78.76,13.82 78.76,13.21 C78.76,12.64 78.68,12.07 78.53,11.52 L78.53,11.52 Z" id="Fill-5"></path>
+    <path d="M83.17,10.78 C83.44,9.98 83.84,9.30 84.36,8.71 C84.89,8.13 85.55,7.67 86.33,7.33 C87.10,7.00 87.99,6.83 89.00,6.83 C90.03,6.83 90.92,7.00 91.69,7.33 C92.46,7.67 93.11,8.13 93.64,8.71 C94.17,9.30 94.56,9.98 94.83,10.78 C95.09,11.57 95.23,12.42 95.23,13.33 C95.23,14.25 95.09,15.09 94.83,15.88 C94.56,16.66 94.17,17.35 93.64,17.93 C93.11,18.52 92.46,18.97 91.69,19.30 C90.92,19.63 90.03,19.79 89.00,19.79 C87.99,19.79 87.10,19.63 86.33,19.30 C85.55,18.97 84.89,18.52 84.36,17.93 C83.84,17.35 83.44,16.66 83.17,15.88 C82.91,15.09 82.78,14.25 82.78,13.33 C82.78,12.42 82.91,11.57 83.17,10.78 L83.17,10.78 Z M85.32,15.34 C85.53,15.92 85.81,16.41 86.18,16.80 C86.54,17.19 86.96,17.49 87.45,17.70 C87.94,17.91 88.46,18.01 89.00,18.01 C89.55,18.01 90.06,17.91 90.55,17.70 C91.04,17.49 91.46,17.19 91.83,16.80 C92.19,16.41 92.48,15.92 92.68,15.34 C92.89,14.75 92.99,14.09 92.99,13.33 C92.99,12.58 92.89,11.91 92.68,11.33 C92.48,10.75 92.19,10.25 91.83,9.85 C91.46,9.45 91.04,9.15 90.55,8.94 C90.06,8.73 89.55,8.63 89.00,8.63 C88.46,8.63 87.94,8.73 87.45,8.94 C86.96,9.15 86.54,9.45 86.18,9.85 C85.81,10.25 85.53,10.75 85.32,11.33 C85.11,11.91 85.01,12.58 85.01,13.33 C85.01,14.09 85.11,14.75 85.32,15.34 L85.32,15.34 Z" id="Fill-6"></path>
+    <path d="M97.83,7.12 L99.94,7.12 L99.94,19.53 L97.83,19.53 L97.83,7.12 Z" id="Fill-7"></path>
+    <path d="M105.19,7.12 L105.19,9.08 L105.24,9.08 C106.12,7.58 107.51,6.83 109.41,6.83 C110.25,6.83 110.95,6.94 111.51,7.16 C112.08,7.39 112.53,7.70 112.88,8.10 C113.23,8.50 113.47,8.98 113.61,9.53 C113.75,10.08 113.82,10.69 113.82,11.36 L113.82,19.53 L111.71,19.53 L111.71,11.12 C111.71,10.36 111.48,9.75 111.02,9.30 C110.56,8.85 109.92,8.63 109.11,8.63 C108.46,8.63 107.91,8.72 107.43,8.92 C106.96,9.11 106.57,9.38 106.26,9.73 C105.94,10.08 105.71,10.50 105.55,10.97 C105.39,11.44 105.32,11.96 105.32,12.52 L105.32,19.53 L103.21,19.53 L103.21,7.12 L105.19,7.12" id="Fill-8"></path>
+    <path d="M122.47,7.12 L122.47,8.92 L119.92,8.92 L119.92,16.62 C119.92,16.86 119.94,17.05 119.98,17.20 C120.02,17.34 120.10,17.46 120.22,17.54 C120.33,17.62 120.49,17.67 120.70,17.69 C120.91,17.71 121.18,17.73 121.50,17.73 L122.47,17.73 L122.47,19.53 L120.86,19.53 C120.32,19.53 119.85,19.49 119.46,19.42 C119.07,19.35 118.76,19.22 118.52,19.02 C118.28,18.83 118.10,18.56 117.99,18.21 C117.87,17.86 117.81,17.39 117.81,16.81 L117.81,8.92 L115.63,8.92 L115.63,7.12 L117.81,7.12 L117.81,3.39 L119.92,3.39 L119.92,7.12 L122.47,7.12" id="Fill-9"></path>
+    <path d="M0.67,11.87 L2.62,13.76 L8.76,19.50 L11.41,16.94 C11.65,16.61 11.64,16.16 11.36,15.84 L8.94,13.72 L8.95,13.72 L6.34,11.19 C6.04,10.84 6.04,10.32 6.37,9.99 L13.38,3.21 L10.20,0.12 L0.68,9.31 C-0.05,10.02 -0.05,11.17 0.67,11.87" id="Fill-10"></path>
+    <path d="M21.60,15.15 L19.66,13.27 L13.51,7.53 L10.86,10.08 C10.62,10.42 10.64,10.87 10.91,11.19 L13.33,13.31 L13.33,13.31 L15.93,15.84 C16.24,16.19 16.23,16.70 15.91,17.04 L8.89,23.82 L12.08,26.91 L19.65,19.60 L21.60,17.71 C22.33,17.01 22.33,15.86 21.60,15.15" id="Fill-11"></path>
+    <path d="M44.55,4.58 C44.55,5.24 44.00,5.77 43.32,5.77 C42.64,5.77 42.09,5.24 42.09,4.58 C42.09,3.93 42.64,3.39 43.32,3.39 C44.00,3.39 44.55,3.93 44.55,4.58" id="Fill-12"></path>
+    <path d="M100.11,4.58 C100.11,5.24 99.56,5.77 98.88,5.77 C98.20,5.77 97.65,5.24 97.65,4.58 C97.65,3.93 98.20,3.39 98.88,3.39 C99.56,3.39 100.11,3.93 100.11,4.58" id="Fill-13"></path>
+  </g>
+</svg>
+          </a>
+        </section>
+        <section uni-nav-section="right">
+          <a uni-nav-item href="https://shop.sitepoint.com">Shop</a>
+          <a uni-nav-item="button" href="/premium/">Premium</a>
+          <div uni-nav-dropdown>
+            <a uni-nav-item>
+              <i class="fa fa-navicon"></i>
+            </a>
+            <div uni-nav-dropdown-inner="medium">
+              <a uni-nav-item href="https://www.sitepoint.com/community/">Forums</a>
+              <a uni-nav-item href="https://www.sitepoint.com/versioning/">Versioning</a>
+              <a uni-nav-item href="/reference/">Reference</a>
+              <div uni-nav-item="dropdown-search">
+                <form method="get" action="http://www.sitepoint.com/">
+                  <input autocomplete="off" class="small" name="s" placeholder="Search SitePoint" type="text">
+                  <button><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </nav>
+
+      <nav uni-nav="large">
+        <section uni-nav-section="left">
+          <a uni-nav-item="logo" href="/">
+            <svg class="sp-logo" viewBox="0 0 123 27">
+  <g fill-rule="evenodd">
+    <path d="M31.36,16.75 C31.56,17.07 31.82,17.31 32.14,17.50 C32.46,17.68 32.82,17.82 33.23,17.89 C33.63,17.97 34.05,18.01 34.48,18.01 C34.81,18.01 35.16,17.99 35.52,17.94 C35.89,17.89 36.22,17.81 36.53,17.68 C36.83,17.55 37.08,17.36 37.28,17.11 C37.48,16.87 37.58,16.55 37.58,16.17 C37.58,15.64 37.37,15.24 36.96,14.97 C36.55,14.69 36.03,14.47 35.41,14.31 C34.79,14.14 34.12,13.99 33.39,13.85 C32.66,13.71 31.99,13.52 31.37,13.27 C30.75,13.03 30.23,12.68 29.82,12.23 C29.41,11.78 29.20,11.16 29.20,10.36 C29.20,9.73 29.34,9.20 29.63,8.75 C29.92,8.30 30.30,7.94 30.75,7.66 C31.20,7.38 31.72,7.17 32.29,7.03 C32.86,6.90 33.42,6.83 33.99,6.83 C34.71,6.83 35.38,6.89 35.99,7.01 C36.61,7.13 37.15,7.34 37.62,7.63 C38.09,7.93 38.46,8.33 38.75,8.83 C39.03,9.34 39.19,9.96 39.24,10.72 L37.13,10.72 C37.10,10.32 36.99,9.98 36.81,9.72 C36.63,9.46 36.40,9.25 36.12,9.08 C35.84,8.92 35.53,8.81 35.19,8.74 C34.85,8.66 34.51,8.63 34.16,8.63 C33.84,8.63 33.53,8.65 33.20,8.70 C32.88,8.75 32.59,8.83 32.32,8.95 C32.06,9.07 31.84,9.23 31.68,9.43 C31.51,9.63 31.43,9.89 31.43,10.21 C31.43,10.56 31.56,10.86 31.82,11.09 C32.07,11.32 32.40,11.51 32.80,11.66 C33.19,11.82 33.64,11.95 34.13,12.05 C34.63,12.15 35.13,12.26 35.62,12.37 C36.15,12.49 36.67,12.62 37.17,12.78 C37.67,12.94 38.12,13.15 38.51,13.42 C38.90,13.68 39.21,14.01 39.45,14.41 C39.69,14.81 39.81,15.31 39.81,15.90 C39.81,16.66 39.65,17.28 39.33,17.77 C39.01,18.27 38.58,18.67 38.06,18.98 C37.54,19.28 36.96,19.49 36.30,19.61 C35.65,19.73 35.00,19.79 34.36,19.79 C33.65,19.79 32.97,19.72 32.32,19.58 C31.68,19.43 31.11,19.20 30.61,18.87 C30.12,18.54 29.72,18.11 29.42,17.57 C29.13,17.03 28.96,16.38 28.93,15.61 L31.03,15.61 C31.05,16.06 31.16,16.44 31.36,16.75" id="Fill-1"></path>
+    <path d="M42.27,7.12 L44.37,7.12 L44.37,19.53 L42.27,19.53 L42.27,7.12 Z" id="Fill-2"></path>
+    <path d="M53.13,7.12 L53.13,8.92 L50.57,8.92 L50.57,16.62 C50.57,16.86 50.59,17.05 50.63,17.20 C50.67,17.34 50.75,17.46 50.87,17.54 C50.99,17.62 51.15,17.67 51.35,17.69 C51.56,17.71 51.83,17.73 52.16,17.73 L53.13,17.73 L53.13,19.53 L51.51,19.53 C50.97,19.53 50.50,19.49 50.11,19.42 C49.72,19.35 49.41,19.22 49.17,19.02 C48.93,18.83 48.75,18.56 48.64,18.21 C48.52,17.86 48.46,17.39 48.46,16.81 L48.46,8.92 L46.28,8.92 L46.28,7.12 L48.46,7.12 L48.46,3.39 L50.57,3.39 L50.57,7.12 L53.13,7.12" id="Fill-3"></path>
+    <path d="M64.53,18.73 C63.57,19.44 62.36,19.79 60.91,19.79 C59.89,19.79 59.00,19.63 58.25,19.31 C57.49,18.99 56.86,18.54 56.35,17.97 C55.84,17.39 55.45,16.70 55.20,15.90 C54.94,15.10 54.80,14.23 54.76,13.29 C54.76,12.34 54.91,11.48 55.21,10.69 C55.51,9.91 55.92,9.23 56.46,8.65 C57.00,8.08 57.63,7.63 58.37,7.31 C59.11,6.99 59.91,6.83 60.79,6.83 C61.93,6.83 62.87,7.05 63.63,7.51 C64.38,7.97 64.98,8.55 65.44,9.25 C65.89,9.96 66.20,10.73 66.38,11.56 C66.55,12.39 66.62,13.18 66.59,13.93 L56.99,13.93 C56.98,14.48 57.04,14.99 57.19,15.48 C57.34,15.97 57.58,16.40 57.91,16.78 C58.24,17.16 58.66,17.46 59.18,17.68 C59.69,17.90 60.29,18.01 60.98,18.01 C61.88,18.01 62.61,17.82 63.18,17.41 C63.75,17.02 64.13,16.41 64.31,15.59 L66.39,15.59 C66.11,16.98 65.49,18.03 64.53,18.73 L64.53,18.73 Z M64.02,10.76 C63.83,10.33 63.58,9.96 63.25,9.65 C62.93,9.34 62.55,9.09 62.11,8.90 C61.68,8.72 61.19,8.63 60.66,8.63 C60.12,8.63 59.62,8.72 59.19,8.90 C58.75,9.09 58.37,9.34 58.06,9.66 C57.75,9.98 57.50,10.35 57.32,10.78 C57.13,11.20 57.03,11.65 56.99,12.13 L64.36,12.13 C64.32,11.65 64.21,11.20 64.02,10.76 L64.02,10.76 Z" id="Fill-4"></path>
+    <path d="M70.95,7.12 L70.95,8.80 L71.00,8.80 C71.35,8.11 71.89,7.61 72.64,7.30 C73.38,6.98 74.20,6.83 75.09,6.83 C76.09,6.83 76.95,7.00 77.68,7.36 C78.42,7.71 79.03,8.18 79.52,8.78 C80.01,9.38 80.37,10.08 80.62,10.86 C80.87,11.65 80.99,12.48 80.99,13.36 C80.99,14.24 80.87,15.07 80.63,15.85 C80.39,16.64 80.03,17.32 79.54,17.91 C79.06,18.49 78.44,18.95 77.71,19.29 C76.97,19.62 76.12,19.79 75.14,19.79 C74.83,19.79 74.48,19.76 74.09,19.70 C73.70,19.63 73.32,19.53 72.94,19.38 C72.56,19.24 72.20,19.04 71.86,18.79 C71.52,18.55 71.23,18.24 71.00,17.87 L70.95,17.87 L70.95,24.26 L68.84,24.26 L68.84,7.12 L70.95,7.12 L70.95,7.12 Z M78.53,11.52 C78.37,10.97 78.13,10.48 77.81,10.04 C77.49,9.61 77.07,9.27 76.57,9.01 C76.06,8.76 75.47,8.63 74.79,8.63 C74.08,8.63 73.48,8.76 72.98,9.04 C72.49,9.31 72.08,9.67 71.77,10.10 C71.46,10.55 71.23,11.05 71.09,11.60 C70.95,12.17 70.88,12.73 70.88,13.31 C70.88,13.92 70.95,14.51 71.10,15.07 C71.25,15.64 71.48,16.14 71.81,16.57 C72.13,17.01 72.55,17.35 73.06,17.62 C73.57,17.88 74.19,18.01 74.92,18.01 C75.65,18.01 76.25,17.88 76.74,17.61 C77.23,17.34 77.62,16.98 77.92,16.53 C78.22,16.08 78.43,15.57 78.56,14.99 C78.70,14.41 78.76,13.82 78.76,13.21 C78.76,12.64 78.68,12.07 78.53,11.52 L78.53,11.52 Z" id="Fill-5"></path>
+    <path d="M83.17,10.78 C83.44,9.98 83.84,9.30 84.36,8.71 C84.89,8.13 85.55,7.67 86.33,7.33 C87.10,7.00 87.99,6.83 89.00,6.83 C90.03,6.83 90.92,7.00 91.69,7.33 C92.46,7.67 93.11,8.13 93.64,8.71 C94.17,9.30 94.56,9.98 94.83,10.78 C95.09,11.57 95.23,12.42 95.23,13.33 C95.23,14.25 95.09,15.09 94.83,15.88 C94.56,16.66 94.17,17.35 93.64,17.93 C93.11,18.52 92.46,18.97 91.69,19.30 C90.92,19.63 90.03,19.79 89.00,19.79 C87.99,19.79 87.10,19.63 86.33,19.30 C85.55,18.97 84.89,18.52 84.36,17.93 C83.84,17.35 83.44,16.66 83.17,15.88 C82.91,15.09 82.78,14.25 82.78,13.33 C82.78,12.42 82.91,11.57 83.17,10.78 L83.17,10.78 Z M85.32,15.34 C85.53,15.92 85.81,16.41 86.18,16.80 C86.54,17.19 86.96,17.49 87.45,17.70 C87.94,17.91 88.46,18.01 89.00,18.01 C89.55,18.01 90.06,17.91 90.55,17.70 C91.04,17.49 91.46,17.19 91.83,16.80 C92.19,16.41 92.48,15.92 92.68,15.34 C92.89,14.75 92.99,14.09 92.99,13.33 C92.99,12.58 92.89,11.91 92.68,11.33 C92.48,10.75 92.19,10.25 91.83,9.85 C91.46,9.45 91.04,9.15 90.55,8.94 C90.06,8.73 89.55,8.63 89.00,8.63 C88.46,8.63 87.94,8.73 87.45,8.94 C86.96,9.15 86.54,9.45 86.18,9.85 C85.81,10.25 85.53,10.75 85.32,11.33 C85.11,11.91 85.01,12.58 85.01,13.33 C85.01,14.09 85.11,14.75 85.32,15.34 L85.32,15.34 Z" id="Fill-6"></path>
+    <path d="M97.83,7.12 L99.94,7.12 L99.94,19.53 L97.83,19.53 L97.83,7.12 Z" id="Fill-7"></path>
+    <path d="M105.19,7.12 L105.19,9.08 L105.24,9.08 C106.12,7.58 107.51,6.83 109.41,6.83 C110.25,6.83 110.95,6.94 111.51,7.16 C112.08,7.39 112.53,7.70 112.88,8.10 C113.23,8.50 113.47,8.98 113.61,9.53 C113.75,10.08 113.82,10.69 113.82,11.36 L113.82,19.53 L111.71,19.53 L111.71,11.12 C111.71,10.36 111.48,9.75 111.02,9.30 C110.56,8.85 109.92,8.63 109.11,8.63 C108.46,8.63 107.91,8.72 107.43,8.92 C106.96,9.11 106.57,9.38 106.26,9.73 C105.94,10.08 105.71,10.50 105.55,10.97 C105.39,11.44 105.32,11.96 105.32,12.52 L105.32,19.53 L103.21,19.53 L103.21,7.12 L105.19,7.12" id="Fill-8"></path>
+    <path d="M122.47,7.12 L122.47,8.92 L119.92,8.92 L119.92,16.62 C119.92,16.86 119.94,17.05 119.98,17.20 C120.02,17.34 120.10,17.46 120.22,17.54 C120.33,17.62 120.49,17.67 120.70,17.69 C120.91,17.71 121.18,17.73 121.50,17.73 L122.47,17.73 L122.47,19.53 L120.86,19.53 C120.32,19.53 119.85,19.49 119.46,19.42 C119.07,19.35 118.76,19.22 118.52,19.02 C118.28,18.83 118.10,18.56 117.99,18.21 C117.87,17.86 117.81,17.39 117.81,16.81 L117.81,8.92 L115.63,8.92 L115.63,7.12 L117.81,7.12 L117.81,3.39 L119.92,3.39 L119.92,7.12 L122.47,7.12" id="Fill-9"></path>
+    <path d="M0.67,11.87 L2.62,13.76 L8.76,19.50 L11.41,16.94 C11.65,16.61 11.64,16.16 11.36,15.84 L8.94,13.72 L8.95,13.72 L6.34,11.19 C6.04,10.84 6.04,10.32 6.37,9.99 L13.38,3.21 L10.20,0.12 L0.68,9.31 C-0.05,10.02 -0.05,11.17 0.67,11.87" id="Fill-10"></path>
+    <path d="M21.60,15.15 L19.66,13.27 L13.51,7.53 L10.86,10.08 C10.62,10.42 10.64,10.87 10.91,11.19 L13.33,13.31 L13.33,13.31 L15.93,15.84 C16.24,16.19 16.23,16.70 15.91,17.04 L8.89,23.82 L12.08,26.91 L19.65,19.60 L21.60,17.71 C22.33,17.01 22.33,15.86 21.60,15.15" id="Fill-11"></path>
+    <path d="M44.55,4.58 C44.55,5.24 44.00,5.77 43.32,5.77 C42.64,5.77 42.09,5.24 42.09,4.58 C42.09,3.93 42.64,3.39 43.32,3.39 C44.00,3.39 44.55,3.93 44.55,4.58" id="Fill-12"></path>
+    <path d="M100.11,4.58 C100.11,5.24 99.56,5.77 98.88,5.77 C98.20,5.77 97.65,5.24 97.65,4.58 C97.65,3.93 98.20,3.39 98.88,3.39 C99.56,3.39 100.11,3.93 100.11,4.58" id="Fill-13"></path>
+  </g>
+</svg>
+          </a>
+        </section>
+        <section uni-nav-section="right">
+          <a uni-nav-item href="https://shop.sitepoint.com">Shop</a>
+          <a uni-nav-item href="https://www.sitepoint.com/community/">Forums</a>
+          <a uni-nav-item href="https://www.sitepoint.com/versioning/">Versioning</a>
+          <a uni-nav-item href="/reference/">Reference</a>
+          <a uni-nav-item href="/premium/">Premium</a>
+
+          <div uni-nav-item="search">
+            <form method="get" action="http://www.sitepoint.com/">
+              <input autocomplete="off" id="search-box" name="s" placeholder="Search SitePoint" type="text">
+              <button><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </section>
+      </nav>
+
+    </header>
+
+    
+<div class="ChannelsNav">
+  <ul>
+    <li class="ChannelsNav_link u-html-css"><a href="http://www.sitepoint.com/html-css/" data-channel="html-css" onClick="sitepoint.ChannelsNav_select(event)">HTML &amp; CSS</a></li>    <li class="ChannelsNav_link u-javascript"><a href="http://www.sitepoint.com/javascript/" data-channel="javascript" onClick="sitepoint.ChannelsNav_select(event)">JS</a></li>    <li class="ChannelsNav_link u-php"><a href="http://www.sitepoint.com/php/" data-channel="php" onClick="sitepoint.ChannelsNav_select(event)">PHP</a></li>    <li class="ChannelsNav_link u-ruby"><a href="http://www.sitepoint.com/ruby/" data-channel="ruby" onClick="sitepoint.ChannelsNav_select(event)">Ruby</a></li>    <li class="ChannelsNav_link u-mobile"><a href="http://www.sitepoint.com/mobile/" data-channel="mobile" onClick="sitepoint.ChannelsNav_select(event)">Mobile</a></li>    <li class="ChannelsNav_link u-design-ux"><a href="http://www.sitepoint.com/design-ux/" data-channel="design-ux" onClick="sitepoint.ChannelsNav_select(event)">Design &amp; UX</a></li>    <li class="ChannelsNav_link u-entrepreneur"><a href="http://www.sitepoint.com/entrepreneur/" data-channel="entrepreneur" onClick="sitepoint.ChannelsNav_select(event)">Entrepreneur</a></li>    <li class="ChannelsNav_link u-web"><a href="http://www.sitepoint.com/web/" data-channel="web" onClick="sitepoint.ChannelsNav_select(event)">Web</a></li>    <li class="ChannelsNav_link u-wordpress"><a href="http://www.sitepoint.com/wordpress/" data-channel="wordpress" onClick="sitepoint.ChannelsNav_select(event)">WP</a></li>    <li class="ChannelsNav_link u-developer-center"><a href="http://www.sitepoint.com/developer-center/" data-channel="developer-center" onClick="sitepoint.ChannelsNav_select(event)">Web Dev <br />@ Microsoft</a></li>  </ul>
+  <div class="ChannelSubNavs u-closed">
+    <div class="ChannelSubNav u-html-css"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/html-css/"><strong>All</strong></a><a href="http://www.sitepoint.com/html-css/css/animation-css/">Animation</a><a href="http://www.sitepoint.com/html-css/html/audio-video/">Audio &amp; Video</a><a href="http://www.sitepoint.com/html-css/css/bootstrap/">Bootstrap</a><a href="http://www.sitepoint.com/html-css/html/canvas-svg/">Canvas &amp; SVG</a><a href="http://www.sitepoint.com/html-css/css/">CSS</a><a href="http://www.sitepoint.com/html-css/css/css-architecture/">CSS Architecture</a><a href="http://www.sitepoint.com/html-css/css/frameworks-css/">Frameworks</a><a href="http://www.sitepoint.com/html-css/html/">HTML</a><a href="http://www.sitepoint.com/html-css/css/sass-css/">Sass</a><a href="http://www.sitepoint.com/html-css/css/web-fonts/">Web Fonts</a></div></div>    <div class="ChannelSubNav u-javascript"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/javascript/"><strong>All</strong></a><a href="http://www.sitepoint.com/javascript/ajax-javascript/">Ajax</a><a href="http://www.sitepoint.com/javascript/angularjs/">AngularJS</a><a href="http://www.sitepoint.com/javascript/apis-javascript/">APIs</a><a href="http://www.sitepoint.com/javascript/es6/">ES6</a><a href="http://www.sitepoint.com/javascript/jquery/">jQuery</a><a href="http://www.sitepoint.com/javascript/nodejs-javascript/">Node.js</a><a href="http://www.sitepoint.com/javascript/npm/">npm</a><a href="http://www.sitepoint.com/javascript/raw-javascript/">Raw JavaScript</a><a href="http://www.sitepoint.com/javascript/react/">React</a><a href="http://www.sitepoint.com/javascript/tools-libraries/">Tools &amp; Libraries</a></div></div>    <div class="ChannelSubNav u-php"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/php/"><strong>All</strong></a><a href="http://www.sitepoint.com/php/apis-php/">APIs</a><a href="http://www.sitepoint.com/php/database/">Database</a><a href="http://www.sitepoint.com/php/debugging-and-deployment/">Debugging &amp; Deployment</a><a href="http://www.sitepoint.com/php/development-environment-php/">Development Environment</a><a href="http://www.sitepoint.com/php/drupal-php/">Drupal</a><a href="http://www.sitepoint.com/php/frameworks-php/">Frameworks</a><a href="http://www.sitepoint.com/php/laravel-php/">Laravel</a><a href="http://www.sitepoint.com/php/patterns-and-practices/">Patterns &amp; Practices</a><a href="http://www.sitepoint.com/php/performance-and-scaling/">Performance &amp; Scaling</a><a href="http://www.sitepoint.com/php/security/">Security</a></div></div>    <div class="ChannelSubNav u-ruby"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/ruby/"><strong>All</strong></a><a href="http://www.sitepoint.com/ruby/best-practices/">Best Practices</a><a href="http://www.sitepoint.com/ruby/gems/">Gems</a><a href="http://www.sitepoint.com/ruby/getting-started/">Getting Started</a><a href="http://www.sitepoint.com/ruby/jruby/">JRuby</a><a href="http://www.sitepoint.com/ruby/ruby-news-opinion/">News &amp; Opinion</a><a href="http://www.sitepoint.com/ruby/ruby-deployment/">Ruby Deployment</a><a href="http://www.sitepoint.com/ruby/ruby-on-rails/">Ruby on Rails</a><a href="http://www.sitepoint.com/ruby/security-ruby/">Security</a></div></div>    <div class="ChannelSubNav u-mobile"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/mobile/"><strong>All</strong></a><a href="http://www.sitepoint.com/mobile/android/">Android</a><a href="http://www.sitepoint.com/mobile/app-development/">App Development</a><a href="http://www.sitepoint.com/mobile/firefox-os-mobile/">Firefox OS</a><a href="http://www.sitepoint.com/mobile/internet-of-things-mobile/">Internet of Things</a><a href="http://www.sitepoint.com/mobile/ios/">iOS</a><a href="http://www.sitepoint.com/mobile/web-mobile/">Mobile Web Development</a><a href="http://www.sitepoint.com/mobile/ux-mobile/">Mobile UX</a><a href="http://www.sitepoint.com/mobile/responsive-web-design/">Responsive Web Design</a><a href="http://www.sitepoint.com/mobile/wearables-mobile/">Wearables</a><a href="http://www.sitepoint.com/mobile/windows-phone/">Windows Phone</a></div></div>    <div class="ChannelSubNav u-design-ux"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/design-ux/"><strong>All</strong></a><a href="http://www.sitepoint.com/design-ux/accessibility/">Accessibility</a><a href="http://www.sitepoint.com/design-ux/animation/">Animation</a><a href="http://www.sitepoint.com/design-ux/color/">Color</a><a href="http://www.sitepoint.com/design-ux/copywriting/">Copywriting</a><a href="http://www.sitepoint.com/design-ux/design-html-css/">HTML &amp; CSS</a><a href="http://www.sitepoint.com/design-ux/illustration/">Illustration</a><a href="http://www.sitepoint.com/design-ux/layout/">Layout</a><a href="http://www.sitepoint.com/design-ux/logo-design/">Logo Design</a><a href="http://www.sitepoint.com/design-ux/mobile-design/">Mobile Design</a><a href="http://www.sitepoint.com/design-ux/performance-ux/">Performance</a><a href="http://www.sitepoint.com/design-ux/photography-and-imagery/">Photography &amp; Imagery</a><a href="http://www.sitepoint.com/design-ux/photoshop/">Photoshop</a><a href="http://www.sitepoint.com/design-ux/prototypes-mockups/">Prototypes &amp; Mockups</a><a href="http://www.sitepoint.com/design-ux/sketch/">Sketch</a><a href="http://www.sitepoint.com/design-ux/typography/">Typography</a><a href="http://www.sitepoint.com/design-ux/ui-design/">UI Design</a><a href="http://www.sitepoint.com/design-ux/ux/">UX</a></div></div>    <div class="ChannelSubNav u-entrepreneur"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/entrepreneur/"><strong>All</strong></a><a href="http://www.sitepoint.com/entrepreneur/business/agile-development-business/">Agile Development</a><a href="http://www.sitepoint.com/entrepreneur/business/">Business</a><a href="http://www.sitepoint.com/entrepreneur/marketing/seo-sem/">SEO &amp; SEM</a><a href="http://www.sitepoint.com/entrepreneur/marketing/content-marketing/">Content Marketing</a><a href="http://www.sitepoint.com/entrepreneur/marketing/email-marketing-marketing/">Email Marketing</a><a href="http://www.sitepoint.com/entrepreneur/business/entrepreneurship-business/">Entrepreneurship</a><a href="http://www.sitepoint.com/entrepreneur/business/finance-business/">Finance</a><a href="http://www.sitepoint.com/entrepreneur/business/freelancing/">Freelancing</a><a href="http://www.sitepoint.com/entrepreneur/business/legal/">Legal</a><a href="http://www.sitepoint.com/entrepreneur/business/management-business/">Management</a><a href="http://www.sitepoint.com/entrepreneur/marketing/">Marketing</a><a href="http://www.sitepoint.com/entrepreneur/business/revenue/">Revenue</a><a href="http://www.sitepoint.com/entrepreneur/marketing/social-media/">Social Media</a><a href="http://www.sitepoint.com/entrepreneur/startups/">Startups</a></div></div>    <div class="ChannelSubNav u-web"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/web/"><strong>All</strong></a><a href="http://www.sitepoint.com/web/apis/">APIs</a><a href="http://www.sitepoint.com/web/browsers/">Browsers</a><a href="http://www.sitepoint.com/web/cms-web/">CMS</a><a href="http://www.sitepoint.com/web/community-web/">Community</a><a href="http://www.sitepoint.com/web/docker/">Docker</a><a href="http://www.sitepoint.com/web/news/">News</a><a href="http://www.sitepoint.com/web/operating-systems/">Operating Systems</a><a href="http://www.sitepoint.com/web/performance-web/">Performance</a><a href="http://www.sitepoint.com/programming/">Programming</a><a href="http://www.sitepoint.com/web/software/">Software</a><a href="http://www.sitepoint.com/web/web-hosting-domains/">Web Hosting &amp; Domains</a><a href="http://www.sitepoint.com/web/web-security/">Web Security</a></div></div>    <div class="ChannelSubNav u-wordpress"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/wordpress/"><strong>All</strong></a><a href="http://www.sitepoint.com/wordpress/performance-wordpress/">Performance</a><a href="http://www.sitepoint.com/wordpress/plugins-wordpress/">Plugins</a><a href="http://www.sitepoint.com/wordpress/security-wordpress/">Security</a><a href="http://www.sitepoint.com/wordpress/themes/">Themes</a><a href="http://www.sitepoint.com/wordpress/wp-api/">WP API</a></div></div>    <div class="ChannelSubNav u-developer-center"><div class="ChannelSubNav_inner"><a class="ChannelSubNav_close" href="#" onClick="sitepoint.ChannelsNav_select(event)"><span>&times;</span></a><a href="http://www.sitepoint.com/developer-center/"><strong>All</strong></a><a href="http://www.sitepoint.com/developer-center/browsers-developer-center/">Browsers</a><a href="http://www.sitepoint.com/developer-center/business-developer-center/">Business</a><a href="http://www.sitepoint.com/developer-center/html-css-developer-center/">HTML &amp; CSS</a><a href="http://www.sitepoint.com/developer-center/javascript-developer-center/">JavaScript</a><a href="http://www.sitepoint.com/developer-center/mobile-developer-center/">Mobile</a><a href="http://www.sitepoint.com/developer-center/php-developer-center/">PHP</a><a href="http://www.sitepoint.com/developer-center/programming-developer-center/">Programming</a><a href="http://www.sitepoint.com/developer-center/web-developer-center/">Web</a><a href="http://www.sitepoint.com/developer-center/wordpress-developer-center/">WordPress</a><a href="http://www.sitepoint.com/developer-center/web-summit/">Web Summit</a></div></div>  </div>
+</div>
+
+<div class="Article u-leaderboardoffset">
+  
+  <div class="ArticleHead t-bg">
+
+        <a href="/web-foundations" class="ArticleHead_icon">
+      <span class="ArticleIcon t-border t-fill">
+        <svg viewBox="0 0 90 90">
+  <g fill-rule="evenodd">
+    <path d="M60.5299639,46.8560606 L57.7396134,44.1597092 L48.9136249,35.9566273 L45.1105871,39.6129308 C44.7621928,40.0876032 44.7856322,40.7346427 45.1841015,41.1865097 L48.65739,44.2196399 L48.6451376,44.221231 L52.389577,47.8361664 C52.8285325,48.3320532 52.8168128,49.0687236 52.3517544,49.5486996 L42.2776195,59.2362598 L46.8557547,63.6589338 L57.7268283,53.2039424 L60.5257022,50.5160767 C61.5756795,49.5062708 61.5778103,47.8663969 60.5299639,46.8560606 L60.5299639,46.8560606 Z M29.4986158,43.1134075 L32.2894991,45.8102893 L41.1154875,54.0117801 L44.9179927,50.3570677 C45.2663869,49.8813345 45.2429476,49.234295 44.845011,48.7829585 L41.3711897,45.7503586 L41.3834421,45.7482372 L37.6390027,42.1327714 C37.2011126,41.6374149 37.2117669,40.9002142 37.6757599,40.4212989 L47.7514929,30.7332084 L43.1733577,26.3110647 L29.5034102,39.4533915 C28.4523676,40.4637277 28.4507694,42.1030712 29.4986158,43.1134075 L29.4986158,43.1134075 Z"></path>
+  </g>
+</svg>
+      </span>
+    </a>
+    
+    <div class="ArticleHead_content">
+
+            <h1 class="ArticleHead_title">How to Make a Simple Image Slider With HTML, CSS and jQuery</h1>
+      
+      
+      <div class="ArticleHead_metas">
+
+          <a href="http://www.sitepoint.com/author/tevko/" class="ArticleHead_meta">
+      <span class="ArticleHead_metaIcon">
+        <img src="http://0.gravatar.com/avatar/3223dfa38896f09bad075c1515d4f3aa?s=96&#038;d=mm&#038;r=g" width="96" height="96" alt="" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 photo avatar-default" />      </span>
+      Tim Evko  </a>
+
+        <div class="ArticleHead_meta">
+                    <div class="ArticleHead_metaIcon">
+            <svg viewBox="0 0 33 35" xmlns="http://www.w3.org/2000/svg">
+  <path d="M31.522 5.9c-.49-.487-1.07-.73-1.742-.73h-2.477V3.32c0-.848-.304-1.574-.91-2.178-.607-.604-1.336-.906-2.187-.906h-1.24c-.85 0-1.58.302-2.186.906-.607.604-.91 1.33-.91 2.177v1.85h-7.432V3.32c0-.848-.303-1.574-.91-2.178C10.922.538 10.193.236 9.34.236H8.104c-.852 0-1.58.302-2.188.906-.606.604-.91 1.33-.91 2.177v1.85H2.53c-.67 0-1.25.24-1.742.73S.05 6.96.05 7.63V32.3c0 .666.246 1.244.736 1.733.49.488 1.07.732 1.742.732h27.25c.672 0 1.253-.244 1.743-.732.49-.49.74-1.067.74-1.734V7.63c0-.668-.24-1.246-.73-1.734zm-9.174-2.58c0-.18.057-.328.173-.444.12-.115.27-.173.45-.173h1.24c.18 0 .33.058.45.173.117.116.175.264.175.443v5.54c0 .18-.06.325-.173.44-.116.116-.264.174-.445.174h-1.24c-.18 0-.33-.058-.444-.174-.114-.112-.17-.26-.17-.44V3.32zm-14.865 0c0-.18.058-.328.174-.444.117-.115.265-.173.446-.173H9.34c.182 0 .33.058.446.173.116.116.175.264.175.443v5.54c0 .18-.05.325-.17.44-.11.116-.26.174-.44.174H8.11c-.18 0-.33-.058-.446-.174-.116-.112-.174-.26-.174-.44V3.32zM29.78 32.296H2.527v-19.73h27.25v19.73z" fill-rule="evenodd"/>
+</svg>
+          </div>
+          <time datetime="2014-09-15" pubdate>September 15, 2014</time>
+                  </div>
+        <div class="ArticleHead_meta">
+                  </div>
+        <div class="ArticleHead_meta">
+                    <thumbvoter-heading id="90394" rating="83" />
+        </div>
+      </div>
+    </div>
+    <div class="ArticleHead_supplemental">
+      <channel-subscribe data-slug="web-foundations"></channel-subscribe>
+    </div>
+  </div>
+
+
+  <div class="ArticleBody" data-hellobar="content">
+    <div class="ArticleContent">
+      <article-sharer data-url="http%3A%2F%2Fwww.sitepoint.com%2Fweb-foundations%2Fmaking-simple-image-slider-html-css-jquery%2F" data-title="How to Make a Simple Image Slider With HTML, CSS and jQuery"></article-sharer>
+      <div class="ThumbVoter_container">
+                <thumbvoter-buttons id="90394"
+          url="https://www.sitepoint.com/wp-admin/admin-ajax.php"
+          user_rating="0"
+          nonce="85019f88f4"
+          channel="web-foundations"
+        />
+      </div>
+      
+      
+  <div class="ArticleLeaderboard u-leaderboard">
+    <hr />
+    <div class="ArticleLeaderboard_content">
+          </div>
+    <hr />
+  </div>
+
+      
+  <div class="ArticleCopy language-">
+    <p>Slideshows, image sliders, magic picture changing boxes: whatever you call them, the pattern is used all over the internet, so much so that nearly every website has one. If you’re a web developer, the time will come when you may have to build one on your own. With that in mind, let’s look at how we can build a simple image slider using HTML, CSS, and jQuery.</p>
+<h2 id="the-html">The HTML</h2>
+<p>We’ll start off by creating a container element, which has the class <code>container</code>. Inside of that lie our images. The images are wrapped with div tags, so the slides can be turned into links, or content other than images can be used as a slide. The first container div has some inline style that makes sure the first image in the slider will be visible on page load. There are also two button elements which are used to manually cycle through slides at the users request. </p>
+<h2 id="the-css">The CSS</h2>
+<p>This is where we set the width of the image slider, container divs, and the images inside of them. It’s important to note that all of our container divs are set to <code>display: none;</code>. If they weren’t, all of our images would be visible at the same time. We’ll use JavaScript to set a container div to <code>display: inline-block;</code>, while the rest remain hidden.</p>
+<h2 id="the-javascript">The JavaScript</h2>
+<p>First up, we need to define a few important variables. The first variable is <code>currentIndex</code>, and it is set to 0. The second variable is <code>items</code>, which is set to <code>$('.container div')</code>. This will return a list of container divs with images inside of them. The third variable is <code>itemAmt</code>, which is set to the length of our <code>items</code> variable. This last variable gives us the total amount of slides in our image slider.</p>
+<p>Next, we create a function called ‘<code>cycleItems</code>’. This function will be used to display the correct image, while ensuring that the others stay hidden. Inside of this function, we create a variable called <code>item</code>. This variable is set to <code>$('.container div').eq(currentIndex)</code>. The <code>eq</code> method provided by jQuery takes an integer, and will target the first item returned by <code>$('.container div')</code> that matches the integer. So if <code>currentIndex</code> is 0, <code>$('.container div').eq(currentIndex)</code> will target the first image container in our image slider. The next thing to do inside of our cycleItems function is to hide all of our image container divs, and set <code>item</code> to <code>display: inline-block;</code>.</p>
+<p>To make sure that our images rotate automatically, we need to provide a way to continuously call our cycleItems function after a certain amount of time has passed. We do this by creating another variable called <code>autoSlide</code>. This variable stores a setInterval function, which takes a 3000 millisecond delay, or three seconds. Inside of that function, we increment the <code>currentIndex</code> variable by one, so that <code>$('.container div').eq(currentIndex)</code> will always reference the next container div. Then we define a very important ‘if’ statement. This statement says that if our <code>currentIndex</code> variable is greater than the total amount of images in our slider, reset the variable back to zero. If we didn’t have this if statement, we wouldn’t be able to cycle through our list of images. After the if statement, we call our cycleItems function.</p>
+<p>Next we define our previous and next actions. These define what will happen when we click the previous and next buttons. They work like the <code>autoSlide</code> function, except they cancel the automatic cycling when clicked. To manually cycle through the slides, clicking the next button adds one to the <code>currentIndex</code> variable, while clicking the previous button subtracts one from the <code>currentIndex</code> variable.</p>
+<h2 id="the-demo">The Demo</h2>
+<p data-height="441" data-theme-id="0" data-slug-hash="aKfqB" data-default-tab="result" data-user="tevko" class='codepen'>See the Pen <a href='http://codepen.io/tevko/pen/aKfqB/'>JS pen #1</a> by Tim (<a href='http://codepen.io/tevko'>@tevko</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p><script async src="//codepen.io/assets/embed/ei.js"></script></p>
+<h2 id="bonus">Bonus</h2>
+<p>To see an image slider built using only CSS and HTML, <a href="http://codepen.io/zackw/pen/FcIaq">check out this demo by Zack Wallace</a>!</p>
+  </div>
+
+  <div>
+      </div>
+
+  <div>
+        <thumbvoter-buttons id="90394"
+      url="https://www.sitepoint.com/wp-admin/admin-ajax.php"
+      user_rating="0"
+      channel=""
+    />
+  </div>
+
+      
+  <div class="ArticleContent_endcap">
+      </div>
+
+      
+  <div class="ArticleLeaderboard">
+    <div class="ArticleLeaderboard_content">
+          </div>
+    <hr />
+  </div>
+
+
+      <a id="comments"></a>
+      
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-120584">
+        <div id="dsq-comment-header-120584" class="dsq-comment-header">
+            <cite id="dsq-cite-120584">
+                <span id="dsq-author-user-120584">Ramy El-Mahdy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120584" class="dsq-comment-body">
+            <div id="dsq-comment-message-120584" class="dsq-comment-message"><p>I tried the codes and it doesn&#8217;t work with me, any help??</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-128081">
+        <div id="dsq-comment-header-128081" class="dsq-comment-header">
+            <cite id="dsq-cite-128081">
+                <span id="dsq-author-user-128081">July Mariana</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128081" class="dsq-comment-body">
+            <div id="dsq-comment-message-128081" class="dsq-comment-message"><p>Try to call the Jquery to your page! If it doesn&#8217;t work, copy the &#8216;page source&#8217; of the frame!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-127896">
+        <div id="dsq-comment-header-127896" class="dsq-comment-header">
+            <cite id="dsq-cite-127896">
+                <span id="dsq-author-user-127896">Bianca</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-127896" class="dsq-comment-body">
+            <div id="dsq-comment-message-127896" class="dsq-comment-message"><p>I tried it and it works superb, many thanks!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-127926">
+        <div id="dsq-comment-header-127926" class="dsq-comment-header">
+            <cite id="dsq-cite-127926">
+                <span id="dsq-author-user-127926">Mark</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-127926" class="dsq-comment-body">
+            <div id="dsq-comment-message-127926" class="dsq-comment-message"><p>i TRY ALL THE  CODES IT DOESNT WORK :3 </p>
+<p> I try the HTML CODE but its not IMAGE SLIDER</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-120677">
+        <div id="dsq-comment-header-120677" class="dsq-comment-header">
+            <cite id="dsq-cite-120677">
+                <span id="dsq-author-user-120677">Victor Martin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120677" class="dsq-comment-body">
+            <div id="dsq-comment-message-120677" class="dsq-comment-message"><p>thank you very much!! this code is so simple that i can&#8217;t believe it</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-120705">
+        <div id="dsq-comment-header-120705" class="dsq-comment-header">
+            <cite id="dsq-cite-120705">
+                <span id="dsq-author-user-120705">pamfromoz</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120705" class="dsq-comment-body">
+            <div id="dsq-comment-message-120705" class="dsq-comment-message"><p>I copied the code, tweaked the image links and it doesn&#8217;t work. What did others tweak to get this to work? Thanks!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-127958">
+        <div id="dsq-comment-header-127958" class="dsq-comment-header">
+            <cite id="dsq-cite-127958">
+                <span id="dsq-author-user-127958">Blazing saddles</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-127958" class="dsq-comment-body">
+            <div id="dsq-comment-message-127958" class="dsq-comment-message"><p>Is this in html5?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-127992">
+        <div id="dsq-comment-header-127992" class="dsq-comment-header">
+            <cite id="dsq-cite-127992">
+                <span id="dsq-author-user-127992">rajat</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-127992" class="dsq-comment-body">
+            <div id="dsq-comment-message-127992" class="dsq-comment-message"><p>I tried it but it didnot work. all the images showed on html page on staring</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-120828">
+        <div id="dsq-comment-header-120828" class="dsq-comment-header">
+            <cite id="dsq-cite-120828">
+                <span id="dsq-author-user-120828">Tim</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120828" class="dsq-comment-body">
+            <div id="dsq-comment-message-120828" class="dsq-comment-message"><p>Just a note&#8230;.you have to have the JS after the slide show to make it work. Figured this out after a while. I had the script in the head tag and it wasn&#8217;t working! Put the script right before the ending body tag and now it works fine. Hope this helps!</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-128079">
+        <div id="dsq-comment-header-128079" class="dsq-comment-header">
+            <cite id="dsq-cite-128079">
+                <span id="dsq-author-user-128079">Sluimerstand</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128079" class="dsq-comment-body">
+            <div id="dsq-comment-message-128079" class="dsq-comment-message"><p>You can also wrap the JS in this code: $(document).ready(function() { [code here] });<br />
+Then it waits for the page to fully load until it initializes the code. :)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-120958">
+        <div id="dsq-comment-header-120958" class="dsq-comment-header">
+            <cite id="dsq-cite-120958">
+                <span id="dsq-author-user-120958">Dave</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120958" class="dsq-comment-body">
+            <div id="dsq-comment-message-120958" class="dsq-comment-message"><p>Thanks you are right! Ending Body it works better i think</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt depth-2" id="dsq-comment-124420">
+        <div id="dsq-comment-header-124420" class="dsq-comment-header">
+            <cite id="dsq-cite-124420">
+                <span id="dsq-author-user-124420">mandeep maharjan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-124420" class="dsq-comment-body">
+            <div id="dsq-comment-message-124420" class="dsq-comment-message"><p>thanks a lot man now the slider works fine &#8230; :D</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-128789">
+        <div id="dsq-comment-header-128789" class="dsq-comment-header">
+            <cite id="dsq-cite-128789">
+                <span id="dsq-author-user-128789">Friendly Neighborhood Develope</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128789" class="dsq-comment-body">
+            <div id="dsq-comment-message-128789" class="dsq-comment-message"><p>Javascript files should always be called before the closing body tag, its just good practice.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-120885">
+        <div id="dsq-comment-header-120885" class="dsq-comment-header">
+            <cite id="dsq-cite-120885">
+                <span id="dsq-author-user-120885">Chintan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-120885" class="dsq-comment-body">
+            <div id="dsq-comment-message-120885" class="dsq-comment-message"><p>Steps:<br />
+1. Need to include &#8220;jquery.min.js&#8221; before  tag<br />
+2. Need to change JS file, replace first three line with below code.<br />
+    var currentIndex = 0;<br />
+    var items = $(&#8216;.container div&#8217;);<br />
+    var itemAmt = items.length;</p>
+<p>Enjoy !!!</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-121137">
+        <div id="dsq-comment-header-121137" class="dsq-comment-header">
+            <cite id="dsq-cite-121137">
+http://www.madillustration.co.uk                <span id="dsq-author-user-121137">Madeleine</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121137" class="dsq-comment-body">
+            <div id="dsq-comment-message-121137" class="dsq-comment-message"><p>Thank you! Most comprehensive answer here.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-128087">
+        <div id="dsq-comment-header-128087" class="dsq-comment-header">
+            <cite id="dsq-cite-128087">
+                <span id="dsq-author-user-128087">jagdeep singh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128087" class="dsq-comment-body">
+            <div id="dsq-comment-message-128087" class="dsq-comment-message"><p>can i take slider in left side now its in center</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-128091">
+        <div id="dsq-comment-header-128091" class="dsq-comment-header">
+            <cite id="dsq-cite-128091">
+                <span id="dsq-author-user-128091">jagdeep</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128091" class="dsq-comment-body">
+            <div id="dsq-comment-message-128091" class="dsq-comment-message"><p>i want this code full and how can i change image and select my photos and link of website location please</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-128113">
+        <div id="dsq-comment-header-128113" class="dsq-comment-header">
+            <cite id="dsq-cite-128113">
+                <span id="dsq-author-user-128113">Ayman</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128113" class="dsq-comment-body">
+            <div id="dsq-comment-message-128113" class="dsq-comment-message"><p>Great slider. I wonder how to make the slider to autoslide again after clicking the next/prev buttons?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-128155">
+        <div id="dsq-comment-header-128155" class="dsq-comment-header">
+            <cite id="dsq-cite-128155">
+                <span id="dsq-author-user-128155">Newbie Coder</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128155" class="dsq-comment-body">
+            <div id="dsq-comment-message-128155" class="dsq-comment-message"><p>Hi Ayman</p>
+<p>See the last response below.<br />
+I have modified the code to perform the task you so desire.<br />
+Enjoy! :)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt depth-2" id="dsq-comment-128156">
+        <div id="dsq-comment-header-128156" class="dsq-comment-header">
+            <cite id="dsq-cite-128156">
+                <span id="dsq-author-user-128156">Newbie Coder</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128156" class="dsq-comment-body">
+            <div id="dsq-comment-message-128156" class="dsq-comment-message"><p>Sorry meant to say below in isha&#8217;s comment.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-128135">
+        <div id="dsq-comment-header-128135" class="dsq-comment-header">
+            <cite id="dsq-cite-128135">
+                <span id="dsq-author-user-128135">isha</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128135" class="dsq-comment-body">
+            <div id="dsq-comment-message-128135" class="dsq-comment-message"><p>code is working good for me, but i was wanting if the button is clicked after some time again the time interval get started.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-128148">
+        <div id="dsq-comment-header-128148" class="dsq-comment-header">
+            <cite id="dsq-cite-128148">
+                <span id="dsq-author-user-128148">Newbie Coder</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128148" class="dsq-comment-body">
+            <div id="dsq-comment-message-128148" class="dsq-comment-message"><p>just remove the &#8220;clearInterval(autoSlide);&#8221; line if you want it to continue sliding after the button clicks.<br />
+If you want to wait a certain period before it continues sliding, just create a timer and add it after the &#8220;cycleItems();&#8221;.<br />
+Or alternatively, you can google if jQuery has a resetInterval, or restartInterval etc etc.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-128149">
+        <div id="dsq-comment-header-128149" class="dsq-comment-header">
+            <cite id="dsq-cite-128149">
+                <span id="dsq-author-user-128149">Newbie Coder</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128149" class="dsq-comment-body">
+            <div id="dsq-comment-message-128149" class="dsq-comment-message"><p>or you can use this information, should be better anyways.</p>
+<p><a href="http://stackoverflow.com/questions/4986667/jquery-how-to-restart-setinterval-after-killing-it-off-with-clearinterval" rel="nofollow">http://stackoverflow.com/questions/4986667/jquery-how-to-restart-setinterval-after-killing-it-off-with-clearinterval</a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt depth-2" id="dsq-comment-128154">
+        <div id="dsq-comment-header-128154" class="dsq-comment-header">
+            <cite id="dsq-cite-128154">
+                <span id="dsq-author-user-128154">Newbie Coder</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128154" class="dsq-comment-body">
+            <div id="dsq-comment-message-128154" class="dsq-comment-message"><p>Hey isha,<br />
+Took the liberty to re-write the js code for you.<br />
+When you click the navigation buttons it will cycle the new image and restart the autoSlide function I have created.<br />
+Just replace your javascript code with the following code:</p>
+<p>$(document).ready(function(){<br />
+    var currentIndex = 0,<br />
+        items = $(&#8216;.container div&#8217;),<br />
+        itemAmt = items.length;<br />
+    var autoSlide;</p>
+<p>    slide();</p>
+<p>    function cycleItems(){<br />
+        var item = $(&#8216;.container div&#8217;).eq(currentIndex);<br />
+        items.hide();<br />
+        item.css(&#8216;display&#8217;, &#8216;inline-block&#8217;);<br />
+    }</p>
+<p>    function slide() {<br />
+        autoSlide = setInterval(function () {<br />
+            currentIndex += 1;<br />
+            if (currentIndex &gt; itemAmt &#8211; 1) {<br />
+                currentIndex = 0;<br />
+            }<br />
+            cycleItems();<br />
+        }, 3000);<br />
+    }</p>
+<p>    $(&#8216;.next&#8217;).click(function () {<br />
+        currentIndex = currentIndex + 1;<br />
+        if (currentIndex &gt; itemAmt &#8211; 1) {<br />
+            currentIndex = 0;<br />
+        }<br />
+        cycleItems();<br />
+        slide();<br />
+    });</p>
+<p>    $(&#8216;.prev&#8217;).click(function () {<br />
+        clearInterval(autoSlide);<br />
+        currentIndex = currentIndex &#8211; 1;<br />
+        if (currentIndex &lt; 0) {<br />
+            currentIndex = itemAmt &#8211; 1;<br />
+        }<br />
+        cycleItems();<br />
+        slide();<br />
+    });<br />
+})</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-130353">
+        <div id="dsq-comment-header-130353" class="dsq-comment-header">
+            <cite id="dsq-cite-130353">
+                <span id="dsq-author-user-130353">mohamed</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-130353" class="dsq-comment-body">
+            <div id="dsq-comment-message-130353" class="dsq-comment-message"><p>hii Newbie Coder</p>
+<p>i tried to add fade-in fade-out Effect to create slideshow in HTML and i cant add Previous and Next buttons</p>
+<p>please help with my code</p>
+<p>    #myslider {</p>
+<p>    opacity:1;</p>
+<p>    filter: alpha(opacity=100); </p>
+<p>    transition: opacity 1s;        </p>
+<p>    }</p>
+<p>    #myslider.fadeOut {</p>
+<p>    opacity:0;                         </p>
+<p>    filter: alpha(opacity=0);  </p>
+<p>    }</p>
+<p>window.onload=function()</p>
+<p>{</p>
+<p>var ListImages =</p>
+<p>    [                                </p>
+<p>    &#8216;images/s01.jpg&#8217;,           </p>
+<p>    &#8216;images/s02.jpg&#8217;,             </p>
+<p>    &#8216;images/s03.jpg&#8217;,      </p>
+<p>    &#8216;images/s04.jpg&#8217;,</p>
+<p>    ],</p>
+<p>    startimage = 0;</p>
+<p>    Duration = 6900;</p>
+<p>function slideShow() {</p>
+<p>    document.getElementById(&#8216;myslider&#8217;).className += &#8220;fadeOut&#8221;;</p>
+<p>    setTimeout(function()</p>
+<p>    {</p>
+<p>        document.getElementById(&#8216;myslider&#8217;).src = ListImages[startimage];</p>
+<p>        document.getElementById(&#8216;myslider&#8217;).className = &#8220;&#8221;;</p>
+<p>    },2000);</p>
+<p>    startimage=startimage + 1;</p>
+<p>    if (startimage == ListImages.length)</p>
+<p>    {</p>
+<p>    startimage = 0;</p>
+<p>    }</p>
+<p>    setTimeout(slideShow,Duration);</p>
+<p>    }</p>
+<p>   slideShow();</p>
+<p>   }</p>
+<p>please help me</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-128146">
+        <div id="dsq-comment-header-128146" class="dsq-comment-header">
+            <cite id="dsq-cite-128146">
+                <span id="dsq-author-user-128146">Lizz</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128146" class="dsq-comment-body">
+            <div id="dsq-comment-message-128146" class="dsq-comment-message"><p>If the slider doesnt work add the following code around the jquery code: </p>
+<p>$(function(){<br />
+PASTE JQUERY CODE FROM ABOVE RIGHT HERE&#8230;<br />
+});</p>
+<p>Thank me later. Flies away.<br />
+Also thanks for the slider tips from the maker! :)</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-130373">
+        <div id="dsq-comment-header-130373" class="dsq-comment-header">
+            <cite id="dsq-cite-130373">
+                <span id="dsq-author-user-130373">nitesh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-130373" class="dsq-comment-body">
+            <div id="dsq-comment-message-130373" class="dsq-comment-message"><p>Thanks for your sharing</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-121015">
+        <div id="dsq-comment-header-121015" class="dsq-comment-header">
+            <cite id="dsq-cite-121015">
+                <span id="dsq-author-user-121015">Siva Kanagaraj</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121015" class="dsq-comment-body">
+            <div id="dsq-comment-message-121015" class="dsq-comment-message"><p>Works fine thanks for d code :)</p>
+<p>Place d JS code before </p>
+<p>Called jquery.min.js inside </p>
+<p>replace first 3 line of JS<br />
+var currentIndex = 0;<br />
+var items = $(&#8216;.container div&#8217;);<br />
+var itemAmt = items.length;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-128203">
+        <div id="dsq-comment-header-128203" class="dsq-comment-header">
+            <cite id="dsq-cite-128203">
+                <span id="dsq-author-user-128203">Mary</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128203" class="dsq-comment-body">
+            <div id="dsq-comment-message-128203" class="dsq-comment-message"><p>Is there a way to create buttons for every image?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-121180">
+        <div id="dsq-comment-header-121180" class="dsq-comment-header">
+            <cite id="dsq-cite-121180">
+                <span id="dsq-author-user-121180">MM Fahim</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121180" class="dsq-comment-body">
+            <div id="dsq-comment-message-121180" class="dsq-comment-message"><p>I tried all of these codes and it doesn&#8217;t work with me, any help??</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-121210">
+        <div id="dsq-comment-header-121210" class="dsq-comment-header">
+            <cite id="dsq-cite-121210">
+                <span id="dsq-author-user-121210">daniel estabillo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121210" class="dsq-comment-body">
+            <div id="dsq-comment-message-121210" class="dsq-comment-message"><p>Can&#8217;t get it to work, I made an external javascript file &#8220;JS.js&#8221; called  inside  tag. Not working, Please help. Thanks</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-131531">
+        <div id="dsq-comment-header-131531" class="dsq-comment-header">
+            <cite id="dsq-cite-131531">
+                <span id="dsq-author-user-131531">lualps</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-131531" class="dsq-comment-body">
+            <div id="dsq-comment-message-131531" class="dsq-comment-message"><p>The code is executed sequentially, load the script after the html of the slider is loaded</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-121285">
+        <div id="dsq-comment-header-121285" class="dsq-comment-header">
+            <cite id="dsq-cite-121285">
+                <span id="dsq-author-user-121285">King Disqus</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121285" class="dsq-comment-body">
+            <div id="dsq-comment-message-121285" class="dsq-comment-message"><p>How can i use this slider twice in one page ?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-121304">
+        <div id="dsq-comment-header-121304" class="dsq-comment-header">
+            <cite id="dsq-cite-121304">
+                <span id="dsq-author-user-121304">Suman</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121304" class="dsq-comment-body">
+            <div id="dsq-comment-message-121304" class="dsq-comment-message"><p>Its Very Nice .. working properly. Thanks for such a good slider code dear maker :) :)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-121832">
+        <div id="dsq-comment-header-121832" class="dsq-comment-header">
+            <cite id="dsq-cite-121832">
+                <span id="dsq-author-user-121832">Jila</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-121832" class="dsq-comment-body">
+            <div id="dsq-comment-message-121832" class="dsq-comment-message"><p>Hello! I tried this code and it works, but Can I ask you a questionS please?<br />
+I create the similar structure in HTML but I use the ul and li to my slides. I think your explanation is good, but I didn&#8217;t understood very well when you said &#8220;The third variable is itemAmt, which is set to the length of our items variable. This last variable gives us the total amount of slides in our image slider.&#8221;.  In my opinion this last variable gives us the amount of one slide, but not the total amount of slides. Do no not hesitate to correct me, if I am wrong. I&#8217;m trying to understand jquery and for me it&#8217;s very difficult.<br />
+I have another things to ask you, Can you explain me better why you use the if statement, please?<br />
+And, last question, Every images has a different texts, when I click the button, also the image must be change, How can I do to add this ? I added to every image a data with my text but I don&#8217;t have any idea to do this action.<br />
+Thank you so much !</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-122327">
+        <div id="dsq-comment-header-122327" class="dsq-comment-header">
+            <cite id="dsq-cite-122327">
+                <span id="dsq-author-user-122327">Koford</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-122327" class="dsq-comment-body">
+            <div id="dsq-comment-message-122327" class="dsq-comment-message"><p>How do i remove cycle, i only want clicking.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-122589">
+        <div id="dsq-comment-header-122589" class="dsq-comment-header">
+            <cite id="dsq-cite-122589">
+http://bmitjaipur.org/                <span id="dsq-author-user-122589">Akshay Akin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-122589" class="dsq-comment-body">
+            <div id="dsq-comment-message-122589" class="dsq-comment-message"><p>var slideimages = new Array() // create new array to preload images</p>
+<p>slideimages[0] = new Image() // create new instance of image object</p>
+<p>slideimages[0].src = &#8220;first_image.gif&#8221; // set image src property to image path, preloading image in the process</p>
+<p>slideimages[1] = new Image()</p>
+<p>slideimages[1].src = &#8220;second_image.gif&#8221;</p>
+<p>slideimages[2] = new Image()</p>
+<p>slideimages[2].src = &#8220;third_image.gif&#8221;</p>
+<p>//variable that will increment through the images</p>
+<p>var step=0</p>
+<p>function slideit(){</p>
+<p> //if browser does not support the image object, exit.</p>
+<p> if (!document.images)</p>
+<p>  return</p>
+<p> document.getElementById(&#8216;slide&#8217;).src = slideimages[step].src</p>
+<p> if (step&lt;2)</p>
+<p>  step++</p>
+<p> else</p>
+<p>  step=0</p>
+<p> //call function &quot;slideit()&quot; every 2.5 seconds</p>
+<p> setTimeout(&quot;slideit()&quot;,2500)</p>
+<p>}</p>
+<p>slideit()</p>
+<p>I am student of BMIT college. if you want to more information regarding same than please contact us by<br />
+email address is  <a href="mailto:webteam@bmitjaipur.org">webteam@bmitjaipur.org</a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-123828">
+        <div id="dsq-comment-header-123828" class="dsq-comment-header">
+            <cite id="dsq-cite-123828">
+                <span id="dsq-author-user-123828">happy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-123828" class="dsq-comment-body">
+            <div id="dsq-comment-message-123828" class="dsq-comment-message"><p>great tutorial thanks for this i found another good tutorial of how to create you own image slider using jquery and css <a href="http://talkerscode.com/webtricks/basic-image-slideshow-with-previous-and-next-button-using-jquery.php" rel="nofollow">http://talkerscode.com/webtricks/basic-image-slideshow-with-previous-and-next-button-using-jquery.php</a></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-123980">
+        <div id="dsq-comment-header-123980" class="dsq-comment-header">
+            <cite id="dsq-cite-123980">
+                <span id="dsq-author-user-123980">Jeff Bain</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-123980" class="dsq-comment-body">
+            <div id="dsq-comment-message-123980" class="dsq-comment-message"><p>I copy and pasted all the code exact and I get the page to show buttons and proper showing of the first image but no slider and buttons don&#8217;t work.  Does anybody know what could be wrong?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-128919">
+        <div id="dsq-comment-header-128919" class="dsq-comment-header">
+            <cite id="dsq-cite-128919">
+                <span id="dsq-author-user-128919">Shweta Saha</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-128919" class="dsq-comment-body">
+            <div id="dsq-comment-message-128919" class="dsq-comment-message"><p>Add jquery.min to your page..It will work</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-130354">
+        <div id="dsq-comment-header-130354" class="dsq-comment-header">
+            <cite id="dsq-cite-130354">
+                <span id="dsq-author-user-130354">mohamed</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-130354" class="dsq-comment-body">
+            <div id="dsq-comment-message-130354" class="dsq-comment-message"><p>whats wrong with this code</p>
+<p>    #myslider {</p>
+<p>    opacity:1;</p>
+<p>    filter: alpha(opacity=100); /* For IE8 and earlier */</p>
+<p>    transition: opacity 1s;        /* Image become more bright for about 1s, smooth transition*/</p>
+<p>    }</p>
+<p>    #myslider.fadeOut {</p>
+<p>    opacity:0;                          /* image is Transparent */</p>
+<p>    filter: alpha(opacity=0);   /* For IE8 and earlier */</p>
+<p>    }</p>
+<p>    #container .prevButton{</p>
+<p>		height:72px;</p>
+<p>		width:68px;</p>
+<p>		position:absolute;</p>
+<p>		background:url(&#8216;images/buttons.png&#8217;) no-repeat;</p>
+<p>		top:50%;</p>
+<p>		margin-top:-36px;</p>
+<p>		cursor:pointer;</p>
+<p>		z-index:2000;</p>
+<p>		background-position:left top;</p>
+<p>		left:0</p>
+<p>	}</p>
+<p>	#container .prevButton:hover{</p>
+<p>			background-position:left bottom;left:0;}</p>
+<p>#container .nextButton{</p>
+<p>		height:72px;</p>
+<p>		width:68px;</p>
+<p>		position:absolute;</p>
+<p>		background:url(&#8216;images/buttons.png&#8217;) no-repeat;</p>
+<p>		top:50%;</p>
+<p>		margin-top:-36px;</p>
+<p>		cursor:pointer;</p>
+<p>		z-index:2000;</p>
+<p>		background-position:right top;</p>
+<p>		right:0</p>
+<p>	}</p>
+<p>	#container .nextButton:hover{</p>
+<p>			background-position:right bottom;right:0;}</p>
+<p>window.onload=function()</p>
+<p>{</p>
+<p>var ListImages =</p>
+<p>    [                                /* Change images if downloaded from below */</p>
+<p>    &#8216;images/s01.jpg&#8217;,               /* Change here: to day.jpg              */</p>
+<p>    &#8216;images/s02.jpg&#8217;,             /* Change here: to monday.jpg       */</p>
+<p>    &#8216;images/s03.jpg&#8217;,           /* Change here: to tuesday.jpg        */</p>
+<p>    &#8216;images/s04.jpg&#8217;,</p>
+<p>    ],</p>
+<p>    startimage = 0;</p>
+<p>    Duration = 6900;</p>
+<p>function slideShow() {</p>
+<p>    document.getElementById(&#8216;myslider&#8217;).className += &#8220;fadeOut&#8221;;</p>
+<p>    setTimeout(function()</p>
+<p>    {</p>
+<p>        document.getElementById(&#8216;myslider&#8217;).src = ListImages[startimage];</p>
+<p>        document.getElementById(&#8216;myslider&#8217;).className = &#8220;&#8221;;</p>
+<p>    },2000);</p>
+<p>    startimage=startimage + 1;</p>
+<p>    if (startimage == ListImages.length)</p>
+<p>    {</p>
+<p>    startimage = 0;</p>
+<p>    }</p>
+<p>    setTimeout(slideShow,Duration);</p>
+<p>    }</p>
+<p>   slideShow();</p>
+<p>};</p>
+<p>function getNext() {</p>
+<p>    var $curr = $(&#8216;.slideshow img:visible&#8217;),</p>
+<p>        $next = ($curr.next().length) ? $curr.next() : $(&#8216;.slideshow img&#8217;).first();</p>
+<p>    transition($curr, $next);</p>
+<p>}</p>
+<p>function getPrev() {</p>
+<p>    var $curr = $(&#8216;.slideshow img:visible&#8217;),</p>
+<p>        $next = ($curr.prev().length) ? $curr.prev() : $(&#8216;.slideshow img&#8217;).last();</p>
+<p>    transition($curr, $next);</p>
+<p>}</p>
+<p>function transition($curr, $next) {</p>
+<p>    clearInterval(interval);</p>
+<p>    $next.css(&#8216;z-index&#8217;, 2).fadeIn(&#8216;slow&#8217;, function () {</p>
+<p>        $curr.hide().css(&#8216;z-index&#8217;, 0);</p>
+<p>        $next.css(&#8216;z-index&#8217;, 1);</p>
+<p>    });</p>
+<p>}</p>
+<p><!--Replace pict1.jpg by day.jpg if downloaded from below--></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-130416">
+        <div id="dsq-comment-header-130416" class="dsq-comment-header">
+            <cite id="dsq-cite-130416">
+                <span id="dsq-author-user-130416">Dragos Rizescu</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-130416" class="dsq-comment-body">
+            <div id="dsq-comment-message-130416" class="dsq-comment-message"><p>Excellent post! Thank you very much!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-131029">
+        <div id="dsq-comment-header-131029" class="dsq-comment-header">
+            <cite id="dsq-cite-131029">
+                <span id="dsq-author-user-131029">William Johnson</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-131029" class="dsq-comment-body">
+            <div id="dsq-comment-message-131029" class="dsq-comment-message"><p>I was wondering, how to add some text to the right side, so quarry can swipe image with tet?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-131030">
+        <div id="dsq-comment-header-131030" class="dsq-comment-header">
+            <cite id="dsq-cite-131030">
+                <span id="dsq-author-user-131030">William Johnson</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-131030" class="dsq-comment-body">
+            <div id="dsq-comment-message-131030" class="dsq-comment-message"><p>I got it, just applied some styles</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-131189">
+        <div id="dsq-comment-header-131189" class="dsq-comment-header">
+            <cite id="dsq-cite-131189">
+                <span id="dsq-author-user-131189">Ariyo Usman Oluwafemi</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-131189" class="dsq-comment-body">
+            <div id="dsq-comment-message-131189" class="dsq-comment-message"><p>check out this demo by Zack Wallace! I copy and use the code on this link.It works fine but I dont know where to add the image because when I remove the link image on there and I put mine,It display the image but does not display the rest image,it seems I dont know where or how to add the rest image on it.Pls quickly assist me with these problem.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-131692">
+        <div id="dsq-comment-header-131692" class="dsq-comment-header">
+            <cite id="dsq-cite-131692">
+                <span id="dsq-author-user-131692">Efrain Camacho</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-131692" class="dsq-comment-body">
+            <div id="dsq-comment-message-131692" class="dsq-comment-message"><p>How do you put these codes together?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'http://www.sitepoint.com/web-foundations/making-simple-image-slider-html-css-jquery/';
+var disqus_identifier = '90394 http://www.sitepoint.com/?post_type=sp_web_foundation&#038;p=90394';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'sitepointproduction';
+var disqus_title = "How to Make a Simple Image Slider With HTML, CSS and jQuery";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=90394';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+
+    </div>
+    
+  <div class="ArticleAside">
+    <div class="ArticleAside_row">
+          </div>
+        <div class="ArticleBox u-premium-preview"></div>
+    <div class="ArticleAside_row ArticleAside_newboxads"></div>
+    <div class="ArticleAside_row"></div>
+  </div>
+
+  </div>
+  <div class="u-accordion-end"></div>
+  </div>
+
+    <footer class="Footer" role="contentinfo">
+      <div class="Footer-inner">
+        <ul class="FooterList">
+          <li class="FooterList_item">
+            <h3>About</h3>
+          </li>
+          <li class="FooterList_item">
+            <a href="/about-us/">Our Story</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/advertising/">Advertise</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/press/">Press Room</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="http://reference.sitepoint.com/css/" target="_blank">Reference</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/legals/">Terms of Use</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/legals/#privacy">Privacy Policy</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="https://sitepoint.zendesk.com/hc/en-us" target="_blank">FAQ</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="mailto:feedback@sitepoint.com">Contact Us</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/write-for-us/">Contribute</a>
+          </li>
+        </ul>
+
+        <ul class="FooterList">
+          <li class="FooterList_item">
+            <h3>Visit</h3>
+          </li>
+          <li class="FooterList_item">
+            <a href="/">SitePoint Home</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="https://www.sitepoint.com/community/">Forums</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/newsletter/">Newsletters</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/premium/">Premium</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="/sass-reference/">References</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="https://shop.sitepoint.com">Shop</a>
+          </li>
+          <li class="FooterList_item">
+            <a href="https://www.sitepoint.com/versioning/">Versioning</a>
+          </li>
+        </ul>
+
+        <ul class="FooterList">
+          <li class="FooterList_item">
+            <h3>Connect</h3>
+          </li>
+          <li class="FooterList_item FooterList_item--icons">
+            <a href="http://www.sitepoint.com/feed/">
+              <i class="fa fa-rss-square"></i>
+            </a>
+            <a href="/newsletter/">
+              <i class="fa fa-envelope-square"></i>
+            </a>
+            <a href="https://www.facebook.com/sitepoint" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="http://twitter.com/sitepointdotcom" target="_blank">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="https://plus.google.com/+sitepoint" target="_blank">
+              <i class="fa fa-google-plus-square"></i>
+            </a>
+          </li>
+        </ul>
+
+        <p class="Footer_copyright">
+          &copy; 2000 &ndash; 2016 SitePoint Pty. Ltd.
+        </p>
+      </div>
+    </footer>
+
+    <div id="search-dropdown">
+      <div data-role="search-for">
+        <a class="search-link" href="#">Search for...</a>
+      </div>
+      <ul data-role="results"></ul>
+    </div>
+    <script type="text/javascript">
+  adroll_adv_id = "DJI3I3WGJBGL7PDJEDAYHV";
+  adroll_pix_id = "4RKMV6N56FGA7ANPGL4FQW";
+  (function () {
+    document.createElement('adblock-carbon');
+    var adblockCarbon = false;
+    var onAdblock = function() {
+      if(adblockCarbon) return;
+
+      adblockCarbon = true;
+
+      gaEventQueue && gaEventQueue.track('CanSeeAds', 'adrollBlocked', {'nonInteraction': true});
+
+      var node = document.getElementsByTagName('adblock-carbon')[0];
+      if (!node) return;
+      var carbon = document.createElement('script');
+      carbon.async = true;
+      carbon.id = '_carbonads_js';
+      carbon.type = 'text/javascript';
+      carbon.src = node.getAttribute('data-src');
+      node.parentNode.insertBefore(carbon, node);
+
+      Array.prototype.slice.call(document.getElementsByClassName('CantSeeAds'))
+        .forEach(function(el) {
+          el.className = el.className.replace('CantSeeAds', '');
+        });
+
+    };
+    var _onload = function(){
+      if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+      if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      scr.onerror = onAdblock;
+      ((document.getElementsByTagName('head') || [null])[0] ||
+          document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+    };
+    if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+    else {window.attachEvent('onload', _onload)}
+  }());
+</script>
+    				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "http://www.sitepoint.com/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'sitepointproduction';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="sitepoint.com"></div>
+</div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
+<script type='text/javascript' src='//www.sitepoint.com/wp-content/themes/sitepoint/assets/javascripts/scripts-foot-c35589b072f697ddab662ecea93150c6.js?ver=4.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"http:\/\/www.sitepoint.com\/wp-content\/plugins\/wp-postratings","ajax_url":"https:\/\/www.sitepoint.com\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"thumbs","image_ext":"gif","max":"2","show_loading":"1","show_fading":"1","custom":"1"};
+var ratings_1_mouseover_image=new Image();ratings_1_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_1_over."+ratingsL10n.image_ext;var ratings_2_mouseover_image=new Image();ratings_2_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_2_over."+ratingsL10n.image_ext;;
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.sitepoint.com/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.82'></script>
+
+  </body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Object Caching 2013/2088 objects using memcached
+Content Delivery Network via Amazon Web Services: CloudFront: dab1nmslvvntp.cloudfront.net
+
+ Served from: www.sitepoint.com @ 2016-01-18 22:25:59 by W3 Total Cache -->

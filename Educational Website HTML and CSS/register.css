@@ -1,0 +1,20 @@
+article {
+	color: red;
+	font: 20px bold Tahoma;
+}
+
+h1{
+	font-size: 28px;
+}
+
+h2{
+	font-size: 20px;
+}
+
+.button1{
+	color: blue;
+	width: 100px;
+	height: 30px;
+	font: 20px bold Tahoma;
+	background: #CCFFCC; 
+}
